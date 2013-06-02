@@ -19,6 +19,7 @@
 		7EE9CC66175B857C0068B9DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE9CC65175B857C0068B9DA /* Default-568h@2x.png */; };
 		7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */; };
 		7EE9CC70175B87E10068B9DA /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE9CC6F175B87E10068B9DA /* MainStoryBoard.storyboard */; };
+		7EE9CC72175B88C00068B9DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC71175B88C00068B9DA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7EE9CC65175B857C0068B9DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7EE9CC68175B857F0068B9DA /* Target_Golf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Target_Golf.xcdatamodel; sourceTree = "<group>"; };
 		7EE9CC6F175B87E10068B9DA /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
+		7EE9CC71175B88C00068B9DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE9CC72175B88C00068B9DA /* CoreLocation.framework in Frameworks */,
 				7EE9CC4E175B85740068B9DA /* UIKit.framework in Frameworks */,
 				7EE9CC50175B85740068B9DA /* Foundation.framework in Frameworks */,
 				7EE9CC52175B85740068B9DA /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		7EE9CC4C175B85740068B9DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EE9CC71175B88C00068B9DA /* CoreLocation.framework */,
 				7EE9CC4D175B85740068B9DA /* UIKit.framework */,
 				7EE9CC4F175B85740068B9DA /* Foundation.framework */,
 				7EE9CC51175B85740068B9DA /* CoreGraphics.framework */,
