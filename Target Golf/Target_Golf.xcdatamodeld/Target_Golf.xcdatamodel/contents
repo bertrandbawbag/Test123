@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Club" syncable="YES">
+    <entity name="Club" representedClassName="Club" syncable="YES">
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shot" inverseName="club" inverseEntity="Shot" syncable="YES"/>
     </entity>
-    <entity name="Location" syncable="YES">
+    <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="altitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="Shot" syncable="YES">
+    <entity name="Shot" representedClassName="Shot" syncable="YES">
         <attribute name="ballDistanceFromTarget" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="ballDistanceFromTee" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="ballHeadingFromTarget" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -21,14 +21,14 @@
         <relationship name="targetLocation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
         <relationship name="teeLocation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="Swing" syncable="YES">
+    <entity name="Swing" representedClassName="Swing" syncable="YES">
         <attribute name="length" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shot" inverseName="swing" inverseEntity="Shot" syncable="YES"/>
     </entity>
     <elements>
         <element name="Club" positionX="160" positionY="192" width="128" height="88"/>
-        <element name="Swing" positionX="295" positionY="44" width="128" height="73"/>
         <element name="Location" positionX="171" positionY="-112" width="128" height="103"/>
         <element name="Shot" positionX="-155" positionY="24" width="128" height="163"/>
+        <element name="Swing" positionX="295" positionY="44" width="128" height="73"/>
     </elements>
 </model>
