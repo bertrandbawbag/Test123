@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E4CC18B17627D8000A3C651 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */; };
+		7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */; };
 		7E87C76F175BB1F700AB7E9F /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C76E175BB1F700AB7E9F /* Shot.m */; };
 		7E87C772175BB1FB00AB7E9F /* Swing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C771175BB1FB00AB7E9F /* Swing.m */; };
 		7E87C775175BB1FE00AB7E9F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C774175BB1FE00AB7E9F /* Location.m */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
+		7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWShotTypeDetailTVC.h; sourceTree = "<group>"; };
+		7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWShotTypeDetailTVC.m; sourceTree = "<group>"; };
 		7E87C76D175BB1F700AB7E9F /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shot.h; path = ../Shot.h; sourceTree = "<group>"; };
 		7E87C76E175BB1F700AB7E9F /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shot.m; path = ../Shot.m; sourceTree = "<group>"; };
 		7E87C770175BB1FB00AB7E9F /* Swing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swing.h; path = ../Swing.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				7EFB6505175B99FA0031122F /* LWMainViewController.h */,
 				7EFB6506175B99FA0031122F /* LWMainViewController.m */,
 				7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */,
+				7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */,
+				7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */,
 			);
 			name = "View Control";
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				7E87C772175BB1FB00AB7E9F /* Swing.m in Sources */,
 				7E87C775175BB1FE00AB7E9F /* Location.m in Sources */,
 				7E87C778175BB20200AB7E9F /* Club.m in Sources */,
+				7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
