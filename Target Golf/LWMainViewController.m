@@ -34,7 +34,6 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     currentClub = (Club *)[NSEntityDescription insertNewObjectForEntityForName:@"Club" inManagedObjectContext:self.context];
-    currentSwing = (Swing *) [NSEntityDescription insertNewObjectForEntityForName:@"Swing" inManagedObjectContext:self.context];
     currentTeeLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
     currentTargetLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
     currentBallLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
@@ -59,7 +58,6 @@
         
         // Pass any objects to the view controller here, like...
         [vc setCurrentClub:currentClub];
-        [vc setCurrentSwing:currentSwing];
         [vc setContext:[self context]];
     }}
 
@@ -156,7 +154,6 @@
     shot.ballLocation = currentBallLocation;
     shot.teeLocation = currentTeeLocation;
     shot.targetLocation = currentTargetLocation;
-    shot.swing = currentSwing;
     shot.club = currentClub;
     
 //TODO: Ball location from Tee and Target
@@ -192,9 +189,9 @@
     
     currentClub.type = @"Wood";
     currentClub.number = @"3";
-    currentSwing.length = @"50%";
+    currentClub.length = @"50%";
     
-    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentSwing.length] forState:UIControlStateNormal];
+    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
     
     [self performSegueWithIdentifier:@"Select Shot" sender:sender];
     

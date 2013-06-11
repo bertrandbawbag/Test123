@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E07EF631767CFE40029EBBB /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF621767CFE40029EBBB /* Club.m */; };
+		7E07EF661767CFE40029EBBB /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF651767CFE40029EBBB /* Shot.m */; };
+		7E07EF691767CFE40029EBBB /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF681767CFE40029EBBB /* Location.m */; };
 		7E4CC18B17627D8000A3C651 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */; };
 		7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */; };
-		7E87C76F175BB1F700AB7E9F /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C76E175BB1F700AB7E9F /* Shot.m */; };
-		7E87C772175BB1FB00AB7E9F /* Swing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C771175BB1FB00AB7E9F /* Swing.m */; };
-		7E87C775175BB1FE00AB7E9F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C774175BB1FE00AB7E9F /* Location.m */; };
-		7E87C778175BB20200AB7E9F /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87C777175BB20200AB7E9F /* Club.m */; };
 		7EE9CC4E175B85740068B9DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC4D175B85740068B9DA /* UIKit.framework */; };
 		7EE9CC50175B85740068B9DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC4F175B85740068B9DA /* Foundation.framework */; };
 		7EE9CC52175B85740068B9DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC51175B85740068B9DA /* CoreGraphics.framework */; };
@@ -29,17 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E07EF611767CFE40029EBBB /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
+		7E07EF621767CFE40029EBBB /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
+		7E07EF641767CFE40029EBBB /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		7E07EF651767CFE40029EBBB /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		7E07EF671767CFE40029EBBB /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		7E07EF681767CFE40029EBBB /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWShotTypeDetailTVC.h; sourceTree = "<group>"; };
 		7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWShotTypeDetailTVC.m; sourceTree = "<group>"; };
-		7E87C76D175BB1F700AB7E9F /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shot.h; path = ../Shot.h; sourceTree = "<group>"; };
-		7E87C76E175BB1F700AB7E9F /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shot.m; path = ../Shot.m; sourceTree = "<group>"; };
-		7E87C770175BB1FB00AB7E9F /* Swing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swing.h; path = ../Swing.h; sourceTree = "<group>"; };
-		7E87C771175BB1FB00AB7E9F /* Swing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Swing.m; path = ../Swing.m; sourceTree = "<group>"; };
-		7E87C773175BB1FE00AB7E9F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
-		7E87C774175BB1FE00AB7E9F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = ../Location.m; sourceTree = "<group>"; };
-		7E87C776175BB20200AB7E9F /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Club.h; path = ../Club.h; sourceTree = "<group>"; };
-		7E87C777175BB20200AB7E9F /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Club.m; path = ../Club.m; sourceTree = "<group>"; };
 		7EE9CC4A175B85740068B9DA /* Target Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Target Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE9CC4D175B85740068B9DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EE9CC4F175B85740068B9DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,15 +143,13 @@
 		D30D5E031764C3E2009F2639 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E07EF611767CFE40029EBBB /* Club.h */,
+				7E07EF671767CFE40029EBBB /* Location.h */,
+				7E07EF681767CFE40029EBBB /* Location.m */,
+				7E07EF641767CFE40029EBBB /* Shot.h */,
+				7E07EF651767CFE40029EBBB /* Shot.m */,
+				7E07EF621767CFE40029EBBB /* Club.m */,
 				7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */,
-				7E87C776175BB20200AB7E9F /* Club.h */,
-				7E87C777175BB20200AB7E9F /* Club.m */,
-				7E87C773175BB1FE00AB7E9F /* Location.h */,
-				7E87C774175BB1FE00AB7E9F /* Location.m */,
-				7E87C770175BB1FB00AB7E9F /* Swing.h */,
-				7E87C771175BB1FB00AB7E9F /* Swing.m */,
-				7E87C76D175BB1F700AB7E9F /* Shot.h */,
-				7E87C76E175BB1F700AB7E9F /* Shot.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -230,11 +225,10 @@
 				7EE9CC60175B857A0068B9DA /* LWAppDelegate.m in Sources */,
 				7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */,
 				7EFB6507175B99FA0031122F /* LWMainViewController.m in Sources */,
-				7E87C76F175BB1F700AB7E9F /* Shot.m in Sources */,
-				7E87C772175BB1FB00AB7E9F /* Swing.m in Sources */,
-				7E87C775175BB1FE00AB7E9F /* Location.m in Sources */,
-				7E87C778175BB20200AB7E9F /* Club.m in Sources */,
 				7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */,
+				7E07EF631767CFE40029EBBB /* Club.m in Sources */,
+				7E07EF661767CFE40029EBBB /* Shot.m in Sources */,
+				7E07EF691767CFE40029EBBB /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
