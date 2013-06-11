@@ -115,50 +115,11 @@
                         <outlet property="setShotTypeButtonOutlet" destination="kBi-4a-TaA" id="PLd-Gh-3CM"/>
                         <outlet property="setTargetLocationButtonOutlet" destination="DtH-Si-hCS" id="K2L-hz-FDV"/>
                         <outlet property="setTeeLocationButtonOutlet" destination="Dnk-du-hwF" id="fhu-O3-Ser"/>
-                        <segue destination="JWW-sn-AgT" kind="push" identifier="Select Shot" id="xmV-u2-d6G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3r-f6-fRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773" y="22"/>
-        </scene>
-        <!--Club And Swing Master View Controller - Select Shot Type-->
-        <scene sceneID="tMl-g9-7H8">
-            <objects>
-                <viewController id="JWW-sn-AgT" customClass="LWClubAndSwingMasterViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c56-5Q-JOu">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NwP-W7-LR5"/>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voA-uJ-gdi">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="QfS-Wx-woJ"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="JWW-sn-AgT" id="Vcz-we-p3x"/>
-                                    <outlet property="delegate" destination="JWW-sn-AgT" id="nd8-oR-ICU"/>
-                                </connections>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="NwP-W7-LR5" secondAttribute="bottom" constant="86" id="1RV-mK-Soi"/>
-                            <constraint firstAttribute="trailing" secondItem="NwP-W7-LR5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4wG-9s-DD7"/>
-                            <constraint firstAttribute="trailing" secondItem="voA-uJ-gdi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MZL-oU-pjk"/>
-                            <constraint firstItem="voA-uJ-gdi" firstAttribute="leading" secondItem="c56-5Q-JOu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZL0-KN-IYY"/>
-                            <constraint firstItem="voA-uJ-gdi" firstAttribute="top" secondItem="c56-5Q-JOu" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gSM-sf-iPX"/>
-                            <constraint firstItem="NwP-W7-LR5" firstAttribute="leading" secondItem="c56-5Q-JOu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gok-aQ-QBe"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Select Shot Type" id="eY3-vg-JXU"/>
-                    <connections>
-                        <outlet property="clubPickerOutlet" destination="voA-uJ-gdi" id="ygf-WX-Tpz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f4K-9g-ERV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1179" y="25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lqr-Cd-Vee">
@@ -180,12 +141,6 @@
         </scene>
     </scenes>
     <classes>
-        <class className="LWClubAndSwingMasterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LWClubAndSwingMasterViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="clubPickerOutlet" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
         <class className="LWMainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LWMainViewController.h"/>
             <relationships>
