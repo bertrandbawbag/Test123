@@ -25,7 +25,6 @@
 		7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */; };
 		7EE9CC72175B88C00068B9DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC71175B88C00068B9DA /* CoreLocation.framework */; };
 		7EFB6507175B99FA0031122F /* LWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB6506175B99FA0031122F /* LWMainViewController.m */; };
-		D30D5E061764C998009F2639 /* LWClubAndSwingMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30D5E051764C998009F2639 /* LWClubAndSwingMasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,8 +55,6 @@
 		7EE9CC71175B88C00068B9DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7EFB6505175B99FA0031122F /* LWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWMainViewController.h; sourceTree = "<group>"; };
 		7EFB6506175B99FA0031122F /* LWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWMainViewController.m; sourceTree = "<group>"; };
-		D30D5E041764C998009F2639 /* LWClubAndSwingMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWClubAndSwingMasterViewController.h; sourceTree = "<group>"; };
-		D30D5E051764C998009F2639 /* LWClubAndSwingMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWClubAndSwingMasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +134,6 @@
 				7EFB6505175B99FA0031122F /* LWMainViewController.h */,
 				7EFB6506175B99FA0031122F /* LWMainViewController.m */,
 				7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */,
-				D30D5E041764C998009F2639 /* LWClubAndSwingMasterViewController.h */,
-				D30D5E051764C998009F2639 /* LWClubAndSwingMasterViewController.m */,
 			);
 			name = "View Control";
 			sourceTree = "<group>";
@@ -234,7 +229,6 @@
 				7E87C772175BB1FB00AB7E9F /* Swing.m in Sources */,
 				7E87C775175BB1FE00AB7E9F /* Location.m in Sources */,
 				7E87C778175BB20200AB7E9F /* Club.m in Sources */,
-				D30D5E061764C998009F2639 /* LWClubAndSwingMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
