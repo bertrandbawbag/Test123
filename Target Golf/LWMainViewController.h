@@ -10,7 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Location.h"
 #import "Shot.h"
-#import "Swing.h"
 #import "Club.h"
 
 @interface LWMainViewController : UIViewController <CLLocationManagerDelegate>
@@ -19,7 +18,6 @@
     Location *currentTeeLocation;
     Location *currentTargetLocation;
     Location *currentBallLocation;
-    Swing *currentSwing;
     Club *currentClub;
     
     
