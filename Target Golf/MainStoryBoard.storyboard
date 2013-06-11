@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Ud-U1-Gdx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="dT6-iE-175">
+            <objects>
+                <viewController id="yb3-iY-jCS" customClass="LWMainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8q-yo-Clt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odB-rj-tGd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="jEg-yw-JsI"/>
+                                    <constraint firstAttribute="height" constant="115" id="l0g-Rs-Bm8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="73"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-sK-UQC">
+                                <color key="backgroundColor" red="0.43542395229999997" green="1" blue="0.76017592960000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="6rl-rv-xS8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtH-Si-hCS">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Set Target">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTargetButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="q4S-mw-GJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnk-du-hwF">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Set Tee">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTeeButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="CCZ-iR-HA5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBi-4a-TaA">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Set Shot Type">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setShotTypeButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="KEj-3K-Iah"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfv-d4-OTw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="LcF-8b-heu"/>
+                                    <constraint firstAttribute="height" constant="74" id="MOW-HN-23N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.66739554331705553" green="1" blue="0.65711718736544411" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ball">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.24460109757763537" blue="0.31424743641012076" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setBallLocationButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="0Ys-SF-r1f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GzJ-sK-UQC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1cc-8f-XLC"/>
+                            <constraint firstItem="odB-rj-tGd" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IF-tg-1iq"/>
+                            <constraint firstItem="GzJ-sK-UQC" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="I8c-xt-cRL"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="GzJ-sK-UQC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KbV-Km-4E9"/>
+                            <constraint firstItem="cfv-d4-OTw" firstAttribute="top" secondItem="Dnk-du-hwF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TIx-mM-f1z"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="h5G-p8-Bki"/>
+                            <constraint firstItem="odB-rj-tGd" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mec-3J-YTF"/>
+                            <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mkE-zL-25p"/>
+                            <constraint firstItem="cfv-d4-OTw" firstAttribute="centerX" secondItem="Dnk-du-hwF" secondAttribute="centerX" type="default" id="nHU-F7-Lz7"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="odB-rj-tGd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nww-7w-qof"/>
+                            <constraint firstItem="Dnk-du-hwF" firstAttribute="top" secondItem="DtH-Si-hCS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="q8H-g3-zJm"/>
+                            <constraint firstAttribute="trailing" secondItem="kBi-4a-TaA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r3X-MO-jaB"/>
+                            <constraint firstItem="kBi-4a-TaA" firstAttribute="top" secondItem="cfv-d4-OTw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sy1-cz-041"/>
+                            <constraint firstAttribute="trailing" secondItem="Dnk-du-hwF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w7P-AZ-det"/>
+                            <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wUl-Qn-SiP"/>
+                            <constraint firstAttribute="trailing" secondItem="DtH-Si-hCS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zHe-AV-NbI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RLY-HS-2MR"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="odB-rj-tGd" id="YUr-bp-aSS"/>
+                        <outlet property="setBallLocationButtonOutlet" destination="cfv-d4-OTw" id="svF-lH-NJP"/>
+                        <outlet property="setShotTypeButtonOutlet" destination="kBi-4a-TaA" id="PLd-Gh-3CM"/>
+                        <outlet property="setTargetLocationButtonOutlet" destination="DtH-Si-hCS" id="K2L-hz-FDV"/>
+                        <outlet property="setTeeLocationButtonOutlet" destination="Dnk-du-hwF" id="fhu-O3-Ser"/>
+                        <segue destination="JWW-sn-AgT" kind="push" identifier="Select Shot" id="xmV-u2-d6G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3r-f6-fRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773" y="22"/>
+        </scene>
+        <!--Club And Swing Master View Controller - Select Shot Type-->
+        <scene sceneID="tMl-g9-7H8">
+            <objects>
+                <viewController id="JWW-sn-AgT" customClass="LWClubAndSwingMasterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c56-5Q-JOu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NwP-W7-LR5"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voA-uJ-gdi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="QfS-Wx-woJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="JWW-sn-AgT" id="Vcz-we-p3x"/>
+                                    <outlet property="delegate" destination="JWW-sn-AgT" id="nd8-oR-ICU"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NwP-W7-LR5" secondAttribute="bottom" constant="86" id="1RV-mK-Soi"/>
+                            <constraint firstAttribute="trailing" secondItem="NwP-W7-LR5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4wG-9s-DD7"/>
+                            <constraint firstAttribute="trailing" secondItem="voA-uJ-gdi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MZL-oU-pjk"/>
+                            <constraint firstItem="voA-uJ-gdi" firstAttribute="leading" secondItem="c56-5Q-JOu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZL0-KN-IYY"/>
+                            <constraint firstItem="voA-uJ-gdi" firstAttribute="top" secondItem="c56-5Q-JOu" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gSM-sf-iPX"/>
+                            <constraint firstItem="NwP-W7-LR5" firstAttribute="leading" secondItem="c56-5Q-JOu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gok-aQ-QBe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Shot Type" id="eY3-vg-JXU"/>
+                    <connections>
+                        <outlet property="clubPickerOutlet" destination="voA-uJ-gdi" id="ygf-WX-Tpz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4K-9g-ERV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lqr-Cd-Vee">
+            <objects>
+                <navigationController id="0Ud-U1-Gdx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L4w-7J-dnz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yb3-iY-jCS" kind="relationship" relationship="rootViewController" id="5US-bR-9ON"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yx-zy-Ymn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="22"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="LWClubAndSwingMasterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LWClubAndSwingMasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="clubPickerOutlet" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="LWMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LWMainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
