@@ -2,7 +2,7 @@
 //  Club.m
 //  Target Golf
 //
-//  Created by Claire Wright on 11/06/2013.
+//  Created by Claire Wright on 12/06/2013.
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
@@ -12,9 +12,10 @@
 
 @implementation Club
 
+@dynamic lastUsed;
+@dynamic length;
 @dynamic number;
 @dynamic type;
-@dynamic length;
 @dynamic shots;
 
 @end

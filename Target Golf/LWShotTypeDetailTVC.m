@@ -87,7 +87,6 @@
     [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", self.currentClub.number, self.currentClub.type]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", self.currentClub.length]];
 
-    
     return cell;
 }
 
