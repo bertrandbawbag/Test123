@@ -11,7 +11,10 @@
 
 
 @interface LWShotTypeDetailTVC : UITableViewController
-
+{
+    NSArray *clubs;
+    
+}
 @property Club *currentClub;
 @property NSManagedObjectContext *context;
 

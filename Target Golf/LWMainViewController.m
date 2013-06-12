@@ -191,6 +191,7 @@
     currentClub.number = @"3";
     currentClub.length = @"50%";
     
+    
     [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
     
     [self performSegueWithIdentifier:@"Select Shot" sender:sender];
