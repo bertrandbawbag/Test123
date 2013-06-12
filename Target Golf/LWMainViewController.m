@@ -31,7 +31,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self.navigationController setNavigationBarHidden:YES];
     
     currentClub = (Club *)[NSEntityDescription insertNewObjectForEntityForName:@"Club" inManagedObjectContext:self.context];
     currentTeeLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
@@ -40,6 +39,12 @@
 
     
     [self.locationManager startUpdatingLocation];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -191,8 +196,6 @@
     currentClub.lastUsed = [NSDate date];
     
     [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
-    
-    [self performSegueWithIdentifier:@"Select Shot" sender:sender];
     
 }
 
