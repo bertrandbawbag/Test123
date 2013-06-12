@@ -15,8 +15,8 @@
     NSArray *clubs;
     
 }
+
 @property Club *currentClub;
 @property NSManagedObjectContext *context;
-
 
 @end

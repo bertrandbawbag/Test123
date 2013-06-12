@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = NO;
+    
     NSEntityDescription *entityDescription = [NSEntityDescription
                                               entityForName:@"Club" inManagedObjectContext:self.context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
