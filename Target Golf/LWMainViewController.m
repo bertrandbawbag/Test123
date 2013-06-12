@@ -185,17 +185,14 @@
 - (IBAction)setShotTypeButton:(UIButton *)sender {
     NSLog(@"%@", sender.titleLabel.text);
     
-    
-    
     currentClub.type = @"Wood";
     currentClub.number = @"3";
     currentClub.length = @"50%";
-    
+    currentClub.lastUsed = [NSDate date];
     
     [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
     
     [self performSegueWithIdentifier:@"Select Shot" sender:sender];
-    
     
 }
 
