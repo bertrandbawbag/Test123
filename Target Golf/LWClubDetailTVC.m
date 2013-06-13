@@ -1,18 +1,18 @@
 //
-//  LWShotTypeDetailTVC.m
+//  LWClubDetailTVC.m
 //  Target Golf
 //
-//  Created by Claire Wright on 11/06/2013.
+//  Created by Claire Wright on 13/06/2013.
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-#import "LWShotTypeDetailTVC.h"
+#import "LWClubDetailTVC.h"
 
-@interface LWShotTypeDetailTVC ()
+@interface LWClubDetailTVC ()
 
 @end
 
-@implementation LWShotTypeDetailTVC
+@implementation LWClubDetailTVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,37 +28,10 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
+    // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    
-    self.navigationController.navigationBarHidden = NO;
-    
-    NSEntityDescription *entityDescription = [NSEntityDescription
-                                              entityForName:@"Club" inManagedObjectContext:self.context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDescription];
-    
-    // Set example predicate and sort orderings...
-    // NSNumber *minimumSalary = ...;
-    // NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(lastName LIKE[c] 'Worsley') AND (salary > %@)", minimumSalary];
-    // [request setPredicate:predicate];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey:@"lastUsed" ascending:YES];
-    [request setSortDescriptors:@[sortDescriptor]];
-    
-    NSError *error;
-    clubs = [self.context executeFetchRequest:request error:&error];
-    if (clubs == nil)
-    {
-        // Deal with error...
-    }
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,30 +44,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return clubs.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Club Cell";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", self.currentClub.number, self.currentClub.type]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", self.currentClub.length]];
-
+    // Configure the cell...
+    
     return cell;
 }
-
-//TODO: Add editing and deletion of objects http://www.appcoda.com/core-data-tutorial-update-delete/
 
 /*
 // Override to support conditional editing of the table view.
