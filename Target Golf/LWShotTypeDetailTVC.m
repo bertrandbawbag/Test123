@@ -32,7 +32,13 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
+    self.navigationItem.rightBarButtonItem = addButton;
+
 }
+                                  
+                                  
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -94,6 +100,11 @@
     return cell;
 }
 
+-(void) addButtonPressed
+{
+    [self performSegueWithIdentifier:@"Club Details" sender:self];
+}
+                                  
 //TODO: Add editing and deletion of objects http://www.appcoda.com/core-data-tutorial-update-delete/
 
 /*
