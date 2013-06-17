@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Club.h"
 
 @interface LWClubDetailTVC : UITableViewController
+
+@property Club *currentClub;
+@property NSManagedObjectContext *context;
 
 @end

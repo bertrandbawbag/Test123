@@ -100,6 +100,7 @@
     return cell;
 }
 
+
 -(void) addButtonPressed
 {
     [self performSegueWithIdentifier:@"Club Details" sender:self];
