@@ -233,7 +233,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Shot" id="9X5-Yd-fOk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7U5-uF-dUW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="2RU-10-qnB">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="fON-eT-fz7" id="gx2-hO-8tN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7U5-uF-dUW">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="fON-eT-fz7" id="I7T-Hj-WV5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="clubNumberTextField" destination="QIt-Kh-ifY" id="Ql8-pW-e9t"/>
@@ -268,6 +277,8 @@
         <class className="ClubAndSwingDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ClubAndSwingDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="saveButtonPressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="clubNumberTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="clubSwingLengthTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="clubTypeTextField" candidateClass="UITextField"/>
