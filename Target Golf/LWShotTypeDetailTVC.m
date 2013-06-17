@@ -93,8 +93,10 @@
     static NSString *CellIdentifier = @"Club Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", self.currentClub.number, self.currentClub.type]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", self.currentClub.length]];
+    Club *clubForRow = [clubs objectAtIndex:indexPath.row];
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", clubForRow.number, clubForRow.type]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", clubForRow.length]];
 
     return cell;
 }
@@ -182,7 +184,18 @@
 - (IBAction)unwindFromAddClubSave:(UIStoryboardSegue *)segue {
     
     ClubAndSwingDetailViewController *sourceVC = segue.sourceViewController;
+    
+    self.currentClub.number = sourceVC.clubNumberTextField.text;
+    self.currentClub.type = sourceVC.clubTypeTextField.text;
+    self.currentClub.length = sourceVC.clubSwingLengthTextField.text;
+    self.currentClub.lastUsed = [NSDate date];
 
+    NSError *error = nil;
+    if (![self.context save:&error]) {
+        // Handle the error.
+    }
+    
+    [self.tableView reloadData];
 }
 
 

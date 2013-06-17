@@ -36,11 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender {
-}
-
-- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender {
-}
 
 
 @end
