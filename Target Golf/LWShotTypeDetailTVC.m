@@ -7,7 +7,7 @@
 //
 
 #import "LWShotTypeDetailTVC.h"
-#import "LWClubDetailTVC.h"
+#import "ClubAndSwingDetailViewController.h"
 
 @interface LWShotTypeDetailTVC ()
 
@@ -34,8 +34,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
-    self.navigationItem.rightBarButtonItem = addButton;
 
 }
                                   
@@ -107,9 +105,10 @@
     if ([[segue identifier] isEqualToString:@"Select Shot"])
     {
         // Get reference to the destination view controller
-        LWClubDetailTVC   *vc = [segue destinationViewController];
+        ClubAndSwingDetailViewController *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
+        
         [vc setCurrentClub:[self currentClub]];
         [vc setContext:[self context]];
     }

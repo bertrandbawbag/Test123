@@ -163,11 +163,87 @@
                             <outlet property="delegate" destination="mvw-iV-5qB" id="iRd-p7-YUp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AZi-LV-fWQ"/>
+                    <navigationItem key="navigationItem" id="AZi-LV-fWQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nTy-zd-CeR">
+                            <connections>
+                                <segue destination="fON-eT-fz7" kind="push" identifier="Select Shot" id="QVv-5B-V1f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdJ-WI-f29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1305" y="22"/>
+        </scene>
+        <!--Club And Swing Detail View Controller - Add New Shot-->
+        <scene sceneID="PuG-mW-LMp">
+            <objects>
+                <viewController id="fON-eT-fz7" customClass="ClubAndSwingDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FBg-ki-BeZ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-i4-v5c">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIt-Kh-ifY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="GVE-lc-gDt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE1-AH-zrJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPY-mA-zsE">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swing Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j62-I5-DPb">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KhK-Ta-Z2C">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hE1-AH-zrJ" firstAttribute="leading" secondItem="FBg-ki-BeZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4ux-Ou-wBk"/>
+                            <constraint firstItem="Bgp-i4-v5c" firstAttribute="leading" secondItem="FBg-ki-BeZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JGP-5p-vjt"/>
+                            <constraint firstItem="OPY-mA-zsE" firstAttribute="leading" secondItem="FBg-ki-BeZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MoE-9O-5ST"/>
+                            <constraint firstItem="KhK-Ta-Z2C" firstAttribute="top" secondItem="j62-I5-DPb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RIA-GM-ORo"/>
+                            <constraint firstItem="QIt-Kh-ifY" firstAttribute="top" secondItem="Bgp-i4-v5c" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ryt-Nl-Vxa"/>
+                            <constraint firstItem="OPY-mA-zsE" firstAttribute="top" secondItem="hE1-AH-zrJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SgX-GS-zxP"/>
+                            <constraint firstItem="KhK-Ta-Z2C" firstAttribute="leading" secondItem="FBg-ki-BeZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dXo-c2-FqJ"/>
+                            <constraint firstItem="OPY-mA-zsE" firstAttribute="trailing" secondItem="QIt-Kh-ifY" secondAttribute="trailing" type="default" id="e0y-KQ-6LI"/>
+                            <constraint firstItem="Bgp-i4-v5c" firstAttribute="top" secondItem="FBg-ki-BeZ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ffh-RO-5by"/>
+                            <constraint firstItem="j62-I5-DPb" firstAttribute="leading" secondItem="FBg-ki-BeZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fhU-5b-sdr"/>
+                            <constraint firstItem="hE1-AH-zrJ" firstAttribute="top" secondItem="FBg-ki-BeZ" secondAttribute="top" constant="108" id="gLk-gB-jKI"/>
+                            <constraint firstItem="KhK-Ta-Z2C" firstAttribute="trailing" secondItem="OPY-mA-zsE" secondAttribute="trailing" type="default" id="iI6-c3-cjw"/>
+                            <constraint firstItem="QIt-Kh-ifY" firstAttribute="leading" secondItem="FBg-ki-BeZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jMK-g7-6rp"/>
+                            <constraint firstItem="j62-I5-DPb" firstAttribute="top" secondItem="FBg-ki-BeZ" secondAttribute="top" constant="200" id="oEo-G1-8di"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Shot" id="9X5-Yd-fOk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7U5-uF-dUW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clubNumberTextField" destination="QIt-Kh-ifY" id="Ql8-pW-e9t"/>
+                        <outlet property="clubSwingLengthTextField" destination="KhK-Ta-Z2C" id="cyN-EZ-4sM"/>
+                        <outlet property="clubTypeTextField" destination="OPY-mA-zsE" id="hhF-sk-PdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYm-SS-5MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="19"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lqr-Cd-Vee">
@@ -188,6 +264,36 @@
             <point key="canvasLocation" x="247" y="22"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ClubAndSwingDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClubAndSwingDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="clubNumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="clubSwingLengthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="clubTypeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LWMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LWMainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="LWShotTypeDetailTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LWShotTypeDetailTVC.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
