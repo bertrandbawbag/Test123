@@ -7,6 +7,7 @@
 //
 
 #import "LWShotTypeDetailTVC.h"
+#import "LWClubDetailTVC.h"
 
 @interface LWShotTypeDetailTVC ()
 
@@ -100,6 +101,19 @@
     return cell;
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Select Shot"])
+    {
+        // Get reference to the destination view controller
+        LWClubDetailTVC   *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        [vc setCurrentClub:[self currentClub]];
+        [vc setContext:[self context]];
+    }
+}
 
 -(void) addButtonPressed
 {
