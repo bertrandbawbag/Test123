@@ -236,11 +236,13 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="save" id="2RU-10-qnB">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="fON-eT-fz7" id="gx2-hO-8tN"/>
+                                <segue destination="OyS-IO-J3h" kind="unwind" unwindAction="unwindFromAddClubSave:" id="vVA-3Y-7dZ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7U5-uF-dUW">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="fON-eT-fz7" id="I7T-Hj-WV5"/>
+                                <segue destination="OyS-IO-J3h" kind="unwind" unwindAction="unwindFromAddClubCancel:" id="AMc-Jc-UcT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -251,6 +253,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYm-SS-5MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OyS-IO-J3h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1720" y="19"/>
         </scene>
@@ -291,6 +294,7 @@
                 <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
                 <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
                 <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="unwindFromAddClubSave:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
@@ -300,9 +304,15 @@
         </class>
         <class className="LWShotTypeDetailTVC" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LWShotTypeDetailTVC.h"/>
+            <relationships>
+                <relationship kind="action" name="unwindFromAddClubCancel:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
