@@ -41,6 +41,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self.navigationController setNavigationBarHidden:NO];
     [self.tableView reloadData];
 }
 
@@ -50,13 +51,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    // Configure the cell to show the book's title
+    Club *club = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", club.number, club.type]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", club.length]];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
     // Return the number of sections.
-    return 1;
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -73,10 +83,7 @@
     static NSString *CellIdentifier = @"Club Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Club *club = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", club.number, club.type]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", club.length]];
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
@@ -89,7 +96,6 @@
     return YES;
 }
 */
-
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,7 +113,8 @@
         }
         
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        // FIXME: Assertion failure
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -120,6 +127,20 @@
 {
     // Return NO if you do not want the item to be re-orderable.
     return NO;
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    
+    if (editing) {
+        self.rightBarButtonItem = self.navigationItem.rightBarButtonItem;
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    else {
+        self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
+        self.rightBarButtonItem = nil;
+    }
 }
 
 #pragma mark - Table view delegate
@@ -155,11 +176,72 @@
     
     // create fetch results controller
     //TODO: Do I need a cache name?
-    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest
+                                                                   managedObjectContext:self.context
+                                                                     sectionNameKeyPath:nil
+                                                                              cacheName:nil];
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
     
 }
+
+#pragma mark - Fetched Results Controller Delegate Methods
+
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:[tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                                                               withRowAnimation:UITableViewRowAnimationFade];
+    break;
+    
+        case NSFetchedResultsChangeDelete:[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                                                           withRowAnimation:UITableViewRowAnimationFade];
+            
+            
+    break;
+        
+        case NSFetchedResultsChangeUpdate:[self configureCell:[tableView cellForRowAtIndexPath:indexPath]
+                                                  atIndexPath:indexPath];
+    break;
+        
+        case NSFetchedResultsChangeMove:[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                                                         withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+    break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    
+    [self.tableView endUpdates];
+}
+
 
 @end
