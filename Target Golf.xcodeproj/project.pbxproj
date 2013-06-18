@@ -10,6 +10,7 @@
 		7E07EF661767CFE40029EBBB /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF651767CFE40029EBBB /* Shot.m */; };
 		7E07EF691767CFE40029EBBB /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF681767CFE40029EBBB /* Location.m */; };
 		7E2B91F0176F9DFC00340D06 /* ClubAndSwingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B91EF176F9DFC00340D06 /* ClubAndSwingDetailViewController.m */; };
+		7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */; };
 		7E4CC18B17627D8000A3C651 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */; };
 		7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */; };
 		7E9A5794176913AC00038392 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A5793176913AC00038392 /* Club.m */; };
@@ -35,6 +36,8 @@
 		7E07EF681767CFE40029EBBB /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		7E2B91EE176F9DFC00340D06 /* ClubAndSwingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubAndSwingDetailViewController.h; sourceTree = "<group>"; };
 		7E2B91EF176F9DFC00340D06 /* ClubAndSwingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubAndSwingDetailViewController.m; sourceTree = "<group>"; };
+		7E46856C1770F1BB00DD5647 /* ShotTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotTypeTVC.h; sourceTree = "<group>"; };
+		7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotTypeTVC.m; sourceTree = "<group>"; };
 		7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWShotTypeDetailTVC.h; sourceTree = "<group>"; };
 		7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWShotTypeDetailTVC.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				7EFB6506175B99FA0031122F /* LWMainViewController.m */,
 				7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */,
 				7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */,
+				7E46856C1770F1BB00DD5647 /* ShotTypeTVC.h */,
+				7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */,
 				7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */,
 				7E2B91EE176F9DFC00340D06 /* ClubAndSwingDetailViewController.h */,
 				7E2B91EF176F9DFC00340D06 /* ClubAndSwingDetailViewController.m */,
@@ -235,6 +240,7 @@
 				7E07EF691767CFE40029EBBB /* Location.m in Sources */,
 				7E9A5794176913AC00038392 /* Club.m in Sources */,
 				7E2B91F0176F9DFC00340D06 /* ClubAndSwingDetailViewController.m in Sources */,
+				7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

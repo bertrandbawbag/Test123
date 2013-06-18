@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShotTypeTVC : UITableViewController
+@interface ShotTypeTVC : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (nonatomic, strong) NSManagedObjectContext *context;
 
 @end
