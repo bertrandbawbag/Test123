@@ -18,5 +18,8 @@
 
 @property Club *currentClub;
 @property NSManagedObjectContext *context;
+//TODO: Do i need a different context to save only clubs
+//TODO: Do not want repeat versions of entities
+
 
 @end
