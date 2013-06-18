@@ -115,21 +115,12 @@
 }
 
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    return NO;
 }
-*/
 
 #pragma mark - Table view delegate
 
@@ -142,6 +133,33 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark - Fetched Results Controller
+
+-(NSFetchedResultsController *) fetchedResultsController
+{
+    if (_fetchedResultsController != nil)   {
+        return _fetchedResultsController;
+    }
+    
+    // create and configure fetchrequest for Club
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Club" inManagedObjectContext:self.context];
+    [fetchRequest setEntity:entity];
+    
+    // define Sort descriptors
+    NSSortDescriptor *dateDescriptor = [[NSSortDescriptor alloc]initWithKey:@"lastUsed" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:dateDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // create fetch results controller
+    //TODO: Do I need a cache name?
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
+    _fetchedResultsController.delegate = self;
+    
+    return _fetchedResultsController;
+    
 }
 
 @end

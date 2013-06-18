@@ -7,7 +7,7 @@
 //
 
 #import "LWMainViewController.h"
-#import "LWShotTypeDetailTVC.h"
+#import "ShotTypeTVC.h"
 
 @interface LWMainViewController ()
 
@@ -59,10 +59,10 @@
     if ([[segue identifier] isEqualToString:@"Select Shot"])
     {
         // Get reference to the destination view controller
-        LWShotTypeDetailTVC  *vc = [segue destinationViewController];
+        ShotTypeTVC *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
-        [vc setCurrentClub:currentClub];
+        // [vc setCurrentClub:currentClub];
         [vc setContext:[self context]];
     }}
 

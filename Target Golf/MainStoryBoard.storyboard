@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="773" y="22"/>
         </scene>
-        <!--Shot Type DetailTVC-->
+        <!--Shot TypeTVC-->
         <scene sceneID="Da5-ss-5rb">
             <objects>
-                <tableViewController id="mvw-iV-5qB" customClass="LWShotTypeDetailTVC" sceneMemberID="viewController">
+                <tableViewController id="mvw-iV-5qB" customClass="ShotTypeTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fS8-gV-Il7">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
