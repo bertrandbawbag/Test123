@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.hidesBackButton = FALSE;
     
     NSError *error;
     
