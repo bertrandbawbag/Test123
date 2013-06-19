@@ -42,7 +42,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO];
-    [self.tableView reloadData];
+    // [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +75,7 @@
     // Return the number of rows in the section.
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections]objectAtIndex:section];
     
+    NSLog(@"%i", [sectionInfo numberOfObjects]);
     return [sectionInfo numberOfObjects];
 }
 
@@ -103,6 +104,8 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         NSManagedObjectContext *moc = [self.fetchedResultsController managedObjectContext];
+        
+        // delete the object
         [moc deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
         
         NSError *error;
@@ -112,9 +115,8 @@
             abort();
         }
         
-        // Delete the row from the data source
-        // FIXME: Assertion failure
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        // Delete the row from the data source - commented out to avoid assertion failure - called to avoid double call to numberOFRowsInSection
+        // [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
