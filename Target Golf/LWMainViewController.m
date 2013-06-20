@@ -64,6 +64,7 @@
         // Pass any objects to the view controller here, like...
         // [vc setCurrentClub:currentClub];
         [vc setContext:[self context]];
+        [vc setCurrentClub:currentClub];
     }}
 
 #pragma mark - Core Location

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Club.h"
 
 @interface ShotTypeTVC : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) Club *currentClub;
 
 @end
