@@ -58,6 +58,13 @@
     
     [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", club.number, club.type]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", club.length]];
+    
+    if ([self.currentClub isEqual:[self.fetchedResultsController objectAtIndexPath:indexPath]]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else  {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
 }
 
 #pragma mark - Table view data source
@@ -156,6 +163,11 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    self.currentClub = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+
+
+
 }
 
 #pragma mark - Fetched Results Controller
