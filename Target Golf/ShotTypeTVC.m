@@ -173,7 +173,7 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     self.checkedCell = indexPath;
     
-    self.currentClub = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self.delegate selectedClub: (Club *) [self.fetchedResultsController objectAtIndexPath:indexPath]];
  
 }
 

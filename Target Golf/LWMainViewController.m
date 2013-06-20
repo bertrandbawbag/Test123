@@ -7,7 +7,7 @@
 //
 
 #import "LWMainViewController.h"
-#import "ShotTypeTVC.h"
+
 
 @interface LWMainViewController ()
 
@@ -63,6 +63,7 @@
         
         // Pass any objects to the view controller here, like...
         // [vc setCurrentClub:currentClub];
+        [vc setDelegate:self];
         [vc setContext:[self context]];
         [vc setCurrentClub:currentClub];
     }}
@@ -191,11 +192,15 @@
 - (IBAction)setShotTypeButton:(UIButton *)sender {
     NSLog(@"%@", sender.titleLabel.text);
     
-    
-    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
-    
 }
 
+// delegate to get currently selected club
+- (void) selectedClub: (Club *) club;
+{
+    currentClub = club;
+    
+    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
+}
 
 
 @end

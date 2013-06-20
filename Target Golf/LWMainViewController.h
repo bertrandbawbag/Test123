@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ShotTypeTVC.h"
 #import "Location.h"
 #import "Shot.h"
 #import "Club.h"
 
-@interface LWMainViewController : UIViewController <CLLocationManagerDelegate>
+@interface LWMainViewController : UIViewController <CLLocationManagerDelegate, ClubDelegate>
 {
     
     Location *currentTeeLocation;
