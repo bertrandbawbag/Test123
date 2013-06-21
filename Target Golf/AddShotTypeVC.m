@@ -14,19 +14,11 @@
 
 @implementation AddShotTypeVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
     
 }
 
@@ -36,6 +28,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)saveButtonPressed:(UIBarButtonItem *)sender
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    self.currentClub.type = self.clubTypeTextField.text;
+    self.currentClub.length = self.clubSwingLengthTextField.text;
+    self.currentClub.lastUsed = [NSDate date];
+    
+    NSError *error = nil;
+    if (![self.context save:&error]) {
+        // Handle the error.
+    }
+    
+}
+
+-(void)cancelButtonPressed:(UIBarButtonItem *)sender
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+}
 
 
 @end

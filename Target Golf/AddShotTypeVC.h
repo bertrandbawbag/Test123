@@ -16,7 +16,7 @@
 @property Club *currentClub;
 @property NSManagedObjectContext *context;
 
-@property (weak, nonatomic) IBOutlet UITextField *clubNumberTextField;
+
 @property (weak, nonatomic) IBOutlet UITextField *clubTypeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *clubSwingLengthTextField;
 
