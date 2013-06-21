@@ -8,20 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "ShotType.h"
+#import "ShotTypeTVC.h"
+
+@protocol AddShotTypeVCDelegate;
 
 @interface AddShotTypeVC : UIViewController
 
 
 
-@property ShotType *currentShotType;
-@property NSManagedObjectContext *context;
 
-
-@property (weak, nonatomic) IBOutlet UITextField *clubTypeTextField;
-@property (weak, nonatomic) IBOutlet UITextField *clubSwingLengthTextField;
+@property (nonatomic, strong) id <AddShotTypeVCDelegate> delegate;
+@property (nonatomic, strong) NSManagedObjectContext *context;
 
 - (IBAction)saveButtonPressed:(UIBarButtonItem *)sender;
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 
+@end
+
+@protocol AddShotTypeVCDelegate
+
+-(void)addShotTypeVC: (AddShotTypeVC *) controller didFinishWithSave: (BOOL) save;
 
 @end

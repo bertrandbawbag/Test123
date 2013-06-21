@@ -33,20 +33,15 @@
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
-    self.currentShotType.club = self.clubTypeTextField.text;
-    self.currentShotType.length = self.clubSwingLengthTextField.text;
-    self.currentShotType.lastUsed = [NSDate date];
-    
-    NSError *error = nil;
-    if (![self.context save:&error]) {
-        // Handle the error.
-    }
+    [self.delegate addShotTypeVC:self didFinishWithSave:YES];
     
 }
 
 -(void)cancelButtonPressed:(UIBarButtonItem *)sender
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    [self.delegate addShotTypeVC:self didFinishWithSave:NO];
     
 }
 
