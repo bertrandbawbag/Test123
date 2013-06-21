@@ -12,14 +12,25 @@
 
 @interface LWShotTypeDetailTVC : UITableViewController
 {
-    NSArray *clubs;
     
 }
 
-@property Club *currentClub;
-@property NSManagedObjectContext *context;
+@property (nonatomic, strong) Club *club;
+
+
 //TODO: Do i need a different context to save only clubs
 //TODO: Do not want repeat versions of entities
+
+
+@end
+
+
+// These methods are used by the addclub view controller
+
+@interface LWShotTypeDetailTVC (Private)
+
+-(void) setUpUndoManager;
+-(void) cleanUpUndoManager;
 
 
 @end

@@ -95,19 +95,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kBi-4a-TaA" secondAttribute="bottom" constant="37" id="15C-El-nVB"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IF-tg-1iq"/>
-                            <constraint firstItem="cfv-d4-OTw" firstAttribute="top" secondItem="Dnk-du-hwF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TIx-mM-f1z"/>
-                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="cxa-tl-B22" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VR8-wK-Gtq"/>
+                            <constraint firstItem="odB-rj-tGd" firstAttribute="bottom" secondItem="cxa-tl-B22" secondAttribute="bottom" type="default" id="FSD-Wi-C0S"/>
+                            <constraint firstAttribute="bottom" secondItem="cfv-d4-OTw" secondAttribute="bottom" constant="97" id="Iti-F2-ifF"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="206" id="Nmt-Gv-ceC"/>
                             <constraint firstItem="cxa-tl-B22" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Xx3-7t-7VX"/>
                             <constraint firstAttribute="trailing" secondItem="cxa-tl-B22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dBQ-rx-Dd1"/>
+                            <constraint firstAttribute="bottom" secondItem="Dnk-du-hwF" secondAttribute="bottom" constant="189" id="eck-F7-TpM"/>
                             <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="h5G-p8-Bki"/>
+                            <constraint firstItem="cfv-d4-OTw" firstAttribute="centerX" secondItem="kBi-4a-TaA" secondAttribute="centerX" type="default" id="mWj-jC-XL0"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mec-3J-YTF"/>
                             <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mkE-zL-25p"/>
-                            <constraint firstItem="cfv-d4-OTw" firstAttribute="centerX" secondItem="Dnk-du-hwF" secondAttribute="centerX" type="default" id="nHU-F7-Lz7"/>
-                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="odB-rj-tGd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nww-7w-qof"/>
-                            <constraint firstItem="Dnk-du-hwF" firstAttribute="top" secondItem="DtH-Si-hCS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="q8H-g3-zJm"/>
                             <constraint firstAttribute="trailing" secondItem="kBi-4a-TaA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r3X-MO-jaB"/>
-                            <constraint firstItem="kBi-4a-TaA" firstAttribute="top" secondItem="cfv-d4-OTw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sy1-cz-041"/>
                             <constraint firstAttribute="trailing" secondItem="Dnk-du-hwF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w7P-AZ-det"/>
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wUl-Qn-SiP"/>
                             <constraint firstItem="cxa-tl-B22" firstAttribute="leading" secondItem="odB-rj-tGd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yJL-qp-iwV"/>
@@ -279,38 +279,6 @@
             <point key="canvasLocation" x="247" y="22"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="ClubAndSwingDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClubAndSwingDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="saveButtonPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="clubNumberTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="clubSwingLengthTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="clubTypeTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LWMainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LWMainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ShotTypeTVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShotTypeTVC.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
