@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		7E07EF661767CFE40029EBBB /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF651767CFE40029EBBB /* Shot.m */; };
 		7E07EF691767CFE40029EBBB /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF681767CFE40029EBBB /* Location.m */; };
-		7E2B91F0176F9DFC00340D06 /* ClubAndSwingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B91EF176F9DFC00340D06 /* ClubAndSwingDetailViewController.m */; };
+		7E2B91F0176F9DFC00340D06 /* AddShotTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B91EF176F9DFC00340D06 /* AddShotTypeVC.m */; };
 		7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */; };
 		7E4CC18B17627D8000A3C651 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */; };
-		7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */; };
+		7E517F611767C47B005F1483 /* ShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* ShotTypeDetailTVC.m */; };
 		7EE9CC4E175B85740068B9DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC4D175B85740068B9DA /* UIKit.framework */; };
 		7EE9CC50175B85740068B9DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC4F175B85740068B9DA /* Foundation.framework */; };
 		7EE9CC52175B85740068B9DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC51175B85740068B9DA /* CoreGraphics.framework */; };
 		7EE9CC54175B85740068B9DA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC53175B85740068B9DA /* CoreData.framework */; };
 		7EE9CC5A175B85770068B9DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EE9CC58175B85770068B9DA /* InfoPlist.strings */; };
 		7EE9CC5C175B85780068B9DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC5B175B85780068B9DA /* main.m */; };
-		7EE9CC60175B857A0068B9DA /* LWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC5F175B857A0068B9DA /* LWAppDelegate.m */; };
+		7EE9CC60175B857A0068B9DA /* TargetGolfAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC5F175B857A0068B9DA /* TargetGolfAppDelegate.m */; };
 		7EE9CC62175B857B0068B9DA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE9CC61175B857B0068B9DA /* Default.png */; };
 		7EE9CC64175B857C0068B9DA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE9CC63175B857C0068B9DA /* Default@2x.png */; };
 		7EE9CC66175B857C0068B9DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE9CC65175B857C0068B9DA /* Default-568h@2x.png */; };
 		7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */; };
 		7EE9CC72175B88C00068B9DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC71175B88C00068B9DA /* CoreLocation.framework */; };
-		7EFB6507175B99FA0031122F /* LWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB6506175B99FA0031122F /* LWMainViewController.m */; };
+		7EFB6507175B99FA0031122F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB6506175B99FA0031122F /* MainViewController.m */; };
 		D3C50CFA1774E2800094B951 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C50CF91774E2800094B951 /* Club.m */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +34,13 @@
 		7E07EF651767CFE40029EBBB /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
 		7E07EF671767CFE40029EBBB /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		7E07EF681767CFE40029EBBB /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		7E2B91EE176F9DFC00340D06 /* ClubAndSwingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubAndSwingDetailViewController.h; sourceTree = "<group>"; };
-		7E2B91EF176F9DFC00340D06 /* ClubAndSwingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubAndSwingDetailViewController.m; sourceTree = "<group>"; };
+		7E2B91EE176F9DFC00340D06 /* AddShotTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShotTypeVC.h; sourceTree = "<group>"; };
+		7E2B91EF176F9DFC00340D06 /* AddShotTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShotTypeVC.m; sourceTree = "<group>"; };
 		7E46856C1770F1BB00DD5647 /* ShotTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotTypeTVC.h; sourceTree = "<group>"; };
 		7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotTypeTVC.m; sourceTree = "<group>"; };
 		7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
-		7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWShotTypeDetailTVC.h; sourceTree = "<group>"; };
-		7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWShotTypeDetailTVC.m; sourceTree = "<group>"; };
+		7E517F5F1767C47B005F1483 /* ShotTypeDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotTypeDetailTVC.h; sourceTree = "<group>"; };
+		7E517F601767C47B005F1483 /* ShotTypeDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotTypeDetailTVC.m; sourceTree = "<group>"; };
 		7EE9CC4A175B85740068B9DA /* Target Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Target Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE9CC4D175B85740068B9DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EE9CC4F175B85740068B9DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,15 +50,15 @@
 		7EE9CC59175B85770068B9DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7EE9CC5B175B85780068B9DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EE9CC5D175B85790068B9DA /* Target Golf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Target Golf-Prefix.pch"; sourceTree = "<group>"; };
-		7EE9CC5E175B85790068B9DA /* LWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWAppDelegate.h; sourceTree = "<group>"; };
-		7EE9CC5F175B857A0068B9DA /* LWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWAppDelegate.m; sourceTree = "<group>"; };
+		7EE9CC5E175B85790068B9DA /* TargetGolfAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetGolfAppDelegate.h; sourceTree = "<group>"; };
+		7EE9CC5F175B857A0068B9DA /* TargetGolfAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetGolfAppDelegate.m; sourceTree = "<group>"; };
 		7EE9CC61175B857B0068B9DA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7EE9CC63175B857C0068B9DA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7EE9CC65175B857C0068B9DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7EE9CC68175B857F0068B9DA /* Target_Golf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Target_Golf.xcdatamodel; sourceTree = "<group>"; };
 		7EE9CC71175B88C00068B9DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		7EFB6505175B99FA0031122F /* LWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWMainViewController.h; sourceTree = "<group>"; };
-		7EFB6506175B99FA0031122F /* LWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWMainViewController.m; sourceTree = "<group>"; };
+		7EFB6505175B99FA0031122F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7EFB6506175B99FA0031122F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D3C50CF81774E2800094B951 /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
 		D3C50CF91774E2800094B951 /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,10 +111,10 @@
 		7EE9CC55175B85750068B9DA /* Target Golf */ = {
 			isa = PBXGroup;
 			children = (
-				D30D5E031764C3E2009F2639 /* Model */,
-				D30D5E021764C37D009F2639 /* View Control */,
-				7EE9CC5E175B85790068B9DA /* LWAppDelegate.h */,
-				7EE9CC5F175B857A0068B9DA /* LWAppDelegate.m */,
+				D3C50CFC1774EC680094B951 /* Resources */,
+				D30D5E021764C37D009F2639 /* View Controllers */,
+				D30D5E031764C3E2009F2639 /* Model Classes */,
+				D3C50CFB1774EC3F0094B951 /* ApplicationDelegate */,
 				7EE9CC56175B85760068B9DA /* Supporting Files */,
 			);
 			path = "Target Golf";
@@ -134,23 +134,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D30D5E021764C37D009F2639 /* View Control */ = {
+		D30D5E021764C37D009F2639 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EFB6505175B99FA0031122F /* LWMainViewController.h */,
-				7EFB6506175B99FA0031122F /* LWMainViewController.m */,
-				7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */,
+				7EFB6505175B99FA0031122F /* MainViewController.h */,
+				7EFB6506175B99FA0031122F /* MainViewController.m */,
 				7E46856C1770F1BB00DD5647 /* ShotTypeTVC.h */,
 				7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */,
-				7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */,
-				7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */,
-				7E2B91EE176F9DFC00340D06 /* ClubAndSwingDetailViewController.h */,
-				7E2B91EF176F9DFC00340D06 /* ClubAndSwingDetailViewController.m */,
+				7E517F5F1767C47B005F1483 /* ShotTypeDetailTVC.h */,
+				7E517F601767C47B005F1483 /* ShotTypeDetailTVC.m */,
+				7E2B91EE176F9DFC00340D06 /* AddShotTypeVC.h */,
+				7E2B91EF176F9DFC00340D06 /* AddShotTypeVC.m */,
 			);
-			name = "View Control";
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		D30D5E031764C3E2009F2639 /* Model */ = {
+		D30D5E031764C3E2009F2639 /* Model Classes */ = {
 			isa = PBXGroup;
 			children = (
 				7E07EF671767CFE40029EBBB /* Location.h */,
@@ -159,9 +158,26 @@
 				7E07EF651767CFE40029EBBB /* Shot.m */,
 				D3C50CF81774E2800094B951 /* Club.h */,
 				D3C50CF91774E2800094B951 /* Club.m */,
+			);
+			name = "Model Classes";
+			sourceTree = "<group>";
+		};
+		D3C50CFB1774EC3F0094B951 /* ApplicationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7EE9CC5E175B85790068B9DA /* TargetGolfAppDelegate.h */,
+				7EE9CC5F175B857A0068B9DA /* TargetGolfAppDelegate.m */,
+			);
+			name = ApplicationDelegate;
+			sourceTree = "<group>";
+		};
+		D3C50CFC1774EC680094B951 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */,
 				7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */,
 			);
-			name = Model;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,13 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EE9CC5C175B85780068B9DA /* main.m in Sources */,
-				7EE9CC60175B857A0068B9DA /* LWAppDelegate.m in Sources */,
+				7EE9CC60175B857A0068B9DA /* TargetGolfAppDelegate.m in Sources */,
 				7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */,
-				7EFB6507175B99FA0031122F /* LWMainViewController.m in Sources */,
-				7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */,
+				7EFB6507175B99FA0031122F /* MainViewController.m in Sources */,
+				7E517F611767C47B005F1483 /* ShotTypeDetailTVC.m in Sources */,
 				7E07EF661767CFE40029EBBB /* Shot.m in Sources */,
 				7E07EF691767CFE40029EBBB /* Location.m in Sources */,
-				7E2B91F0176F9DFC00340D06 /* ClubAndSwingDetailViewController.m in Sources */,
+				7E2B91F0176F9DFC00340D06 /* AddShotTypeVC.m in Sources */,
 				7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */,
 				D3C50CFA1774E2800094B951 /* Club.m in Sources */,
 			);

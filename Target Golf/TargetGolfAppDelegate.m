@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-#import "LWAppDelegate.h"
-#import "LWMainViewController.h"
+#import "TargetGolfAppDelegate.h"
+#import "MainViewController.h"
 
-@implementation LWAppDelegate
+@implementation TargetGolfAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -26,7 +26,7 @@
     */
     
     UINavigationController *rootViewController = (UINavigationController *)self.window.rootViewController;
-    LWMainViewController *viewController = (LWMainViewController *) [[rootViewController viewControllers] objectAtIndex:0];
+    MainViewController *viewController = (MainViewController *) [[rootViewController viewControllers] objectAtIndex:0];
     viewController.context = self.managedObjectContext;
     
     

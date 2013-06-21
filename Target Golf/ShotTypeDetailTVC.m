@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-#import "LWShotTypeDetailTVC.h"
-#import "ClubAndSwingDetailViewController.h"
+#import "ShotTypeDetailTVC.h"
+#import "AddShotTypeVC.h"
 
-@interface LWShotTypeDetailTVC ()
+@interface ShotTypeDetailTVC ()
 
 @end
 
-@implementation LWShotTypeDetailTVC
+@implementation ShotTypeDetailTVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,8 +44,7 @@
     
     self.navigationController.navigationBarHidden = NO;
     
-    NSEntityDescription *entityDescription = [NSEntityDescription
-                                              entityForName:@"Club" inManagedObjectContext:self.context];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Club" inManagedObjectContext:self.context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
     
@@ -95,7 +94,7 @@
     
     Club *clubForRow = [clubs objectAtIndex:indexPath.row];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", clubForRow.number, clubForRow.type]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@",clubForRow.type]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", clubForRow.length]];
 
     return cell;
@@ -107,7 +106,7 @@
     if ([[segue identifier] isEqualToString:@"Select Shot"])
     {
         // Get reference to the destination view controller
-        ClubAndSwingDetailViewController *vc = [segue destinationViewController];
+        AddShotTypeVC *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
         
@@ -177,15 +176,14 @@
 
 - (IBAction)unwindFromAddClubCancel:(UIStoryboardSegue *)segue {
     
-    ClubAndSwingDetailViewController *sourceVC = segue.sourceViewController;
+    AddShotTypeVC *sourceVC = segue.sourceViewController;
     
 }
 
 - (IBAction)unwindFromAddClubSave:(UIStoryboardSegue *)segue {
     
-    ClubAndSwingDetailViewController *sourceVC = segue.sourceViewController;
+    AddShotTypeVC *sourceVC = segue.sourceViewController;
     
-    self.currentClub.number = sourceVC.clubNumberTextField.text;
     self.currentClub.type = sourceVC.clubTypeTextField.text;
     self.currentClub.length = sourceVC.clubSwingLengthTextField.text;
     self.currentClub.lastUsed = [NSDate date];

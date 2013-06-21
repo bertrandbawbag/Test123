@@ -10,12 +10,13 @@
 #import "Club.h"
 
 
-@interface LWShotTypeDetailTVC : UITableViewController
+@interface ShotTypeDetailTVC : UITableViewController
 {
-    
+    NSArray *clubs;
 }
 
-@property (nonatomic, strong) Club *club;
+@property (nonatomic, strong) Club *currentClub;
+@property   (nonatomic,strong) NSManagedObjectContext *context;
 
 
 //TODO: Do i need a different context to save only clubs
@@ -27,7 +28,7 @@
 
 // These methods are used by the addclub view controller
 
-@interface LWShotTypeDetailTVC (Private)
+@interface ShotTypeDetailTVC (Private)
 
 -(void) setUpUndoManager;
 -(void) cleanUpUndoManager;

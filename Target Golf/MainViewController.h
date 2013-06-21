@@ -13,7 +13,7 @@
 #import "Shot.h"
 #import "Club.h"
 
-@interface LWMainViewController : UIViewController <CLLocationManagerDelegate, ClubDelegate>
+@interface MainViewController : UIViewController <CLLocationManagerDelegate, ClubDelegate>
 {
     
     Location *currentTeeLocation;

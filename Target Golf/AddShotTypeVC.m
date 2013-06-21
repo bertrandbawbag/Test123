@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-#import "ClubAndSwingDetailViewController.h"
+#import "AddShotTypeVC.h"
 
-@interface ClubAndSwingDetailViewController ()
+@interface AddShotTypeVC ()
 
 @end
 
-@implementation ClubAndSwingDetailViewController
+@implementation AddShotTypeVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

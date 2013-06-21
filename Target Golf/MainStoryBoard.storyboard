@@ -7,7 +7,7 @@
         <!--Main View Controller-->
         <scene sceneID="dT6-iE-175">
             <objects>
-                <viewController id="yb3-iY-jCS" customClass="LWMainViewController" sceneMemberID="viewController">
+                <viewController id="yb3-iY-jCS" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l8q-yo-Clt">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -171,19 +171,19 @@
                     <navigationItem key="navigationItem" id="AZi-LV-fWQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nTy-zd-CeR">
                             <connections>
-                                <segue destination="fON-eT-fz7" kind="push" identifier="Select Shot" id="QVv-5B-V1f"/>
+                                <segue destination="fON-eT-fz7" kind="push" id="lyK-OB-RDO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdJ-WI-f29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="22"/>
+            <point key="canvasLocation" x="1275" y="22"/>
         </scene>
-        <!--Club And Swing Detail View Controller - Add New Shot-->
+        <!--Add Shot TypeVC - Add New Shot-->
         <scene sceneID="PuG-mW-LMp">
             <objects>
-                <viewController id="fON-eT-fz7" customClass="ClubAndSwingDetailViewController" sceneMemberID="viewController">
+                <viewController id="fON-eT-fz7" customClass="AddShotTypeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FBg-ki-BeZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,7 +258,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYm-SS-5MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="OyS-IO-J3h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="19"/>
+            <point key="canvasLocation" x="1762" y="22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lqr-Cd-Vee">
@@ -279,6 +279,38 @@
             <point key="canvasLocation" x="247" y="22"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddShotTypeVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddShotTypeVC.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="saveButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="clubNumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="clubSwingLengthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="clubTypeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ShotTypeTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShotTypeTVC.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

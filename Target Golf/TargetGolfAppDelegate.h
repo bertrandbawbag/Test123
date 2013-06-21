@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LWAppDelegate : UIResponder <UIApplicationDelegate>
+@interface TargetGolfAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

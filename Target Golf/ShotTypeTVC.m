@@ -58,7 +58,7 @@
     // Configure the cell to show the book's title
     Club *club = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", club.number, club.type]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@",club.type]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", club.length]];
     
     if ([self.checkedCell isEqual:indexPath]) {
@@ -221,8 +221,8 @@
     
     switch(type) {
             
-        case NSFetchedResultsChangeInsert:[tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                                                               withRowAnimation:UITableViewRowAnimationFade];
+        case NSFetchedResultsChangeInsert:[tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
     break;
     
         case NSFetchedResultsChangeDelete:[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]

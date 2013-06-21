@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Club.h"
 
-@interface ClubAndSwingDetailViewController : UIViewController
+@interface AddShotTypeVC : UIViewController
 
 
 
@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *clubNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *clubTypeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *clubSwingLengthTextField;
+
 - (IBAction)saveButtonPressed:(UIBarButtonItem *)sender;
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 

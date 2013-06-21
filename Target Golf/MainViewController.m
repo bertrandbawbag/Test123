@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-#import "LWMainViewController.h"
+#import "MainViewController.h"
 
 
-@interface LWMainViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation LWMainViewController
+@implementation MainViewController
 
 #pragma mark - View Controller
 
@@ -199,7 +199,7 @@
 {
     currentClub = club;
     
-    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@ %@", currentClub.number, currentClub.type, currentClub.length] forState:UIControlStateNormal];
+    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@", currentClub.type, currentClub.length] forState:UIControlStateNormal];
 }
 
 
