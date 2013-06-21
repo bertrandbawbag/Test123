@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
+@property (nonatomic,strong) NSIndexPath *checkedCell;
 
 @end
 
@@ -24,6 +25,7 @@
     [super viewDidLoad];
     
     self.navigationItem.hidesBackButton = FALSE;
+    
     
     NSError *error;
     
@@ -58,6 +60,13 @@
     
     [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", club.number, club.type]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", club.length]];
+    
+    if ([self.checkedCell isEqual:indexPath]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else  {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
 }
 
 #pragma mark - Table view data source
@@ -156,6 +165,17 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
+    if(self.checkedCell)   {
+        UITableViewCell *unCheckCell = [tableView cellForRowAtIndexPath:self.checkedCell];
+        unCheckCell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    self.checkedCell = indexPath;
+    
+    [self.delegate selectedClub: (Club *) [self.fetchedResultsController objectAtIndexPath:indexPath]];
+ 
 }
 
 #pragma mark - Fetched Results Controller
