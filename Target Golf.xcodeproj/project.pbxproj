@@ -13,7 +13,6 @@
 		7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */; };
 		7E4CC18B17627D8000A3C651 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */; };
 		7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */; };
-		7E9A5794176913AC00038392 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A5793176913AC00038392 /* Club.m */; };
 		7EE9CC4E175B85740068B9DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC4D175B85740068B9DA /* UIKit.framework */; };
 		7EE9CC50175B85740068B9DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC4F175B85740068B9DA /* Foundation.framework */; };
 		7EE9CC52175B85740068B9DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC51175B85740068B9DA /* CoreGraphics.framework */; };
@@ -27,6 +26,7 @@
 		7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */; };
 		7EE9CC72175B88C00068B9DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC71175B88C00068B9DA /* CoreLocation.framework */; };
 		7EFB6507175B99FA0031122F /* LWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB6506175B99FA0031122F /* LWMainViewController.m */; };
+		D3C50CFA1774E2800094B951 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C50CF91774E2800094B951 /* Club.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,6 @@
 		7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		7E517F5F1767C47B005F1483 /* LWShotTypeDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWShotTypeDetailTVC.h; sourceTree = "<group>"; };
 		7E517F601767C47B005F1483 /* LWShotTypeDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWShotTypeDetailTVC.m; sourceTree = "<group>"; };
-		7E9A5792176913AC00038392 /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
-		7E9A5793176913AC00038392 /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
 		7EE9CC4A175B85740068B9DA /* Target Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Target Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE9CC4D175B85740068B9DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EE9CC4F175B85740068B9DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +59,8 @@
 		7EE9CC71175B88C00068B9DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7EFB6505175B99FA0031122F /* LWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWMainViewController.h; sourceTree = "<group>"; };
 		7EFB6506175B99FA0031122F /* LWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWMainViewController.m; sourceTree = "<group>"; };
+		D3C50CF81774E2800094B951 /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
+		D3C50CF91774E2800094B951 /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +157,9 @@
 				7E07EF681767CFE40029EBBB /* Location.m */,
 				7E07EF641767CFE40029EBBB /* Shot.h */,
 				7E07EF651767CFE40029EBBB /* Shot.m */,
+				D3C50CF81774E2800094B951 /* Club.h */,
+				D3C50CF91774E2800094B951 /* Club.m */,
 				7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */,
-				7E9A5792176913AC00038392 /* Club.h */,
-				7E9A5793176913AC00038392 /* Club.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,9 +238,9 @@
 				7E517F611767C47B005F1483 /* LWShotTypeDetailTVC.m in Sources */,
 				7E07EF661767CFE40029EBBB /* Shot.m in Sources */,
 				7E07EF691767CFE40029EBBB /* Location.m in Sources */,
-				7E9A5794176913AC00038392 /* Club.m in Sources */,
 				7E2B91F0176F9DFC00340D06 /* ClubAndSwingDetailViewController.m in Sources */,
 				7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */,
+				D3C50CFA1774E2800094B951 /* Club.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

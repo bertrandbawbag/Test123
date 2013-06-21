@@ -2,7 +2,7 @@
 //  Club.h
 //  Target Golf
 //
-//  Created by Claire Wright on 12/06/2013.
+//  Created by Brian Wright on 21/06/2013.
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
@@ -15,7 +15,6 @@
 
 @property (nonatomic, retain) NSDate * lastUsed;
 @property (nonatomic, retain) NSString * length;
-@property (nonatomic, retain) NSString * number;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSSet *shots;
 @end

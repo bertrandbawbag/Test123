@@ -3,7 +3,6 @@
     <entity name="Club" representedClassName="Club" syncable="YES">
         <attribute name="lastUsed" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="length" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shot" inverseName="club" inverseEntity="Shot" syncable="YES"/>
     </entity>
@@ -23,8 +22,8 @@
         <relationship name="teeLocation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Club" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Club" positionX="160" positionY="192" width="128" height="105"/>
         <element name="Location" positionX="171" positionY="-112" width="128" height="103"/>
-        <element name="Shot" positionX="-155" positionY="24" width="128" height="150"/>
+        <element name="Shot" positionX="-243" positionY="3" width="128" height="150"/>
     </elements>
 </model>
