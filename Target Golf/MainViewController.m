@@ -32,7 +32,7 @@
 	// Do any additional setup after loading the view.
     
     
-    currentClub = (Club *)[NSEntityDescription insertNewObjectForEntityForName:@"Club" inManagedObjectContext:self.context];
+    currentShotType = (ShotType *)[NSEntityDescription insertNewObjectForEntityForName:@"ShotType" inManagedObjectContext:self.context];
     currentTeeLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
     currentTargetLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
     currentBallLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
@@ -56,7 +56,7 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:@"Select Shot"])
+    if ([[segue identifier] isEqualToString:@"Select ShotType"])
     {
         // Get reference to the destination view controller
         ShotTypeTVC *vc = [segue destinationViewController];
@@ -65,7 +65,7 @@
         // [vc setCurrentClub:currentClub];
         [vc setDelegate:self];
         [vc setContext:[self context]];
-        [vc setCurrentClub:currentClub];
+        [vc setCurrentShotType:currentShotType];
     }}
 
 #pragma mark - Core Location
@@ -161,7 +161,7 @@
     shot.ballLocation = currentBallLocation;
     shot.teeLocation = currentTeeLocation;
     shot.targetLocation = currentTargetLocation;
-    shot.club = currentClub;
+    shot.shotType = currentShotType;
     
 //TODO: Ball location from Tee and Target
 //TODO: Allow for no target
@@ -195,11 +195,11 @@
 }
 
 // delegate to get currently selected club
-- (void) selectedClub: (Club *) club;
+- (void) selectedShotType: (ShotType *) shotType;
 {
-    currentClub = club;
+    currentShotType = shotType;
     
-    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@", currentClub.type, currentClub.length] forState:UIControlStateNormal];
+    [self.setShotTypeButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@", currentShotType.club, currentShotType.length] forState:UIControlStateNormal];
 }
 
 

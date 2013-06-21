@@ -7,7 +7,7 @@
 //
 
 #import "ShotTypeTVC.h"
-#import "Club.h"
+#import "ShotType.h"
 
 @interface ShotTypeTVC ()
 
@@ -56,10 +56,10 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     // Configure the cell to show the book's title
-    Club *club = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    ShotType *shotType = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@",club.type]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", club.length]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@",shotType.club]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", shotType.length]];
     
     if ([self.checkedCell isEqual:indexPath]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -174,7 +174,7 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     self.checkedCell = indexPath;
     
-    [self.delegate selectedClub: (Club *) [self.fetchedResultsController objectAtIndexPath:indexPath]];
+    [self.delegate selectedShotType: (ShotType *) [self.fetchedResultsController objectAtIndexPath:indexPath]];
  
 }
 
@@ -188,7 +188,7 @@
     
     // create and configure fetchrequest for Club
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Club" inManagedObjectContext:self.context];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShotType" inManagedObjectContext:self.context];
     [fetchRequest setEntity:entity];
     
     // define Sort descriptors

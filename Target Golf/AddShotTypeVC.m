@@ -33,9 +33,9 @@
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
-    self.currentClub.type = self.clubTypeTextField.text;
-    self.currentClub.length = self.clubSwingLengthTextField.text;
-    self.currentClub.lastUsed = [NSDate date];
+    self.currentShotType.club = self.clubTypeTextField.text;
+    self.currentShotType.length = self.clubSwingLengthTextField.text;
+    self.currentShotType.lastUsed = [NSDate date];
     
     NSError *error = nil;
     if (![self.context save:&error]) {

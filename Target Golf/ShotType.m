@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-#import "Club.h"
+#import "ShotType.h"
 #import "Shot.h"
 
 
-@implementation Club
+@implementation ShotType
 
 @dynamic lastUsed;
 @dynamic length;
-@dynamic type;
+@dynamic club;
 @dynamic shots;
 
 @end

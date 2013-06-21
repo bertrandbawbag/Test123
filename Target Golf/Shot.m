@@ -7,7 +7,7 @@
 //
 
 #import "Shot.h"
-#import "Club.h"
+#import "ShotType.h"
 #import "Location.h"
 
 
@@ -17,7 +17,7 @@
 @dynamic ballDistanceFromTee;
 @dynamic ballHeadingFromTarget;
 @dynamic ballLocation;
-@dynamic club;
+@dynamic shotType;
 @dynamic targetLocation;
 @dynamic teeLocation;
 

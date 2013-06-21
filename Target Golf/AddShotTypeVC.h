@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Club.h"
+#import "ShotType.h"
 
 @interface AddShotTypeVC : UIViewController
 
 
 
-@property Club *currentClub;
+@property ShotType *currentShotType;
 @property NSManagedObjectContext *context;
 
 

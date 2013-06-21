@@ -7,22 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Club.h"
+#import "ShotType.h"
 
-@protocol ClubDelegate;
+@protocol ShotTypeTVCDelegate;
 
 
 @interface ShotTypeTVC : UITableViewController <NSFetchedResultsControllerDelegate>
 {
 }
-@property (nonatomic, weak) id <ClubDelegate> delegate;
+@property (nonatomic, weak) id <ShotTypeTVCDelegate> delegate;
 @property (nonatomic, strong) NSManagedObjectContext *context;
-@property (nonatomic, strong) Club *currentClub;
+@property (nonatomic, strong) ShotType *currentShotType;
 
 @end
 
-@protocol ClubDelegate <NSObject>
+@protocol ShotTypeTVCDelegate <NSObject>
 
-- (void) selectedClub: (Club *) club;
+- (void) selectedShotType: (ShotType *) shotType;
 
 @end

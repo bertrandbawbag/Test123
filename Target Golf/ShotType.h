@@ -1,5 +1,5 @@
 //
-//  Club.h
+//  ShotType.h
 //  Target Golf
 //
 //  Created by Brian Wright on 21/06/2013.
@@ -11,15 +11,15 @@
 
 @class Shot;
 
-@interface Club : NSManagedObject
+@interface ShotType : NSManagedObject
 
 @property (nonatomic, retain) NSDate * lastUsed;
 @property (nonatomic, retain) NSString * length;
-@property (nonatomic, retain) NSString * type;
+@property (nonatomic, retain) NSString * club;
 @property (nonatomic, retain) NSSet *shots;
 @end
 
-@interface Club (CoreDataGeneratedAccessors)
+@interface ShotType (CoreDataGeneratedAccessors)
 
 - (void)addShotsObject:(Shot *)value;
 - (void)removeShotsObject:(Shot *)value;

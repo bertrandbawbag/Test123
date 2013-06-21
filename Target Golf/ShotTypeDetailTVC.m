@@ -44,7 +44,7 @@
     
     self.navigationController.navigationBarHidden = NO;
     
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Club" inManagedObjectContext:self.context];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShotType" inManagedObjectContext:self.context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
     
@@ -92,9 +92,9 @@
     static NSString *CellIdentifier = @"Club Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Club *clubForRow = [clubs objectAtIndex:indexPath.row];
+    ShotType *clubForRow = [clubs objectAtIndex:indexPath.row];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@",clubForRow.type]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@",clubForRow.club]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", clubForRow.length]];
 
     return cell;
@@ -110,7 +110,7 @@
         
         // Pass any objects to the view controller here, like...
         
-        [vc setCurrentClub:[self currentClub]];
+        [vc setCurrentShotType:[self currentShotType]];
         [vc setContext:[self context]];
     }
 }
@@ -184,9 +184,9 @@
     
     AddShotTypeVC *sourceVC = segue.sourceViewController;
     
-    self.currentClub.type = sourceVC.clubTypeTextField.text;
-    self.currentClub.length = sourceVC.clubSwingLengthTextField.text;
-    self.currentClub.lastUsed = [NSDate date];
+    self.currentShotType.club = sourceVC.clubTypeTextField.text;
+    self.currentShotType.length = sourceVC.clubSwingLengthTextField.text;
+    self.currentShotType.lastUsed = [NSDate date];
 
     NSError *error = nil;
     if (![self.context save:&error]) {

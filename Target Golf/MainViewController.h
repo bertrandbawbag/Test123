@@ -11,15 +11,15 @@
 #import "ShotTypeTVC.h"
 #import "Location.h"
 #import "Shot.h"
-#import "Club.h"
+#import "ShotType.h"
 
-@interface MainViewController : UIViewController <CLLocationManagerDelegate, ClubDelegate>
+@interface MainViewController : UIViewController <CLLocationManagerDelegate, ShotTypeTVCDelegate>
 {
     
     Location *currentTeeLocation;
     Location *currentTargetLocation;
     Location *currentBallLocation;
-    Club *currentClub;
+    ShotType *currentShotType;
     
     
     CLLocation *currentTeeCoreLocation;

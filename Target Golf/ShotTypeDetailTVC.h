@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Club.h"
+#import "ShotType.h"
 
 
 @interface ShotTypeDetailTVC : UITableViewController
@@ -15,7 +15,7 @@
     NSArray *clubs;
 }
 
-@property (nonatomic, strong) Club *currentClub;
+@property (nonatomic, strong) ShotType *currentShotType;
 @property   (nonatomic,strong) NSManagedObjectContext *context;
 
 

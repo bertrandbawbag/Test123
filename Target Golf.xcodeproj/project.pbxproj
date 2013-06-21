@@ -26,7 +26,7 @@
 		7EE9CC69175B85800068B9DA /* Target_Golf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */; };
 		7EE9CC72175B88C00068B9DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CC71175B88C00068B9DA /* CoreLocation.framework */; };
 		7EFB6507175B99FA0031122F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB6506175B99FA0031122F /* MainViewController.m */; };
-		D3C50CFA1774E2800094B951 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C50CF91774E2800094B951 /* Club.m */; };
+		D3C50CFA1774E2800094B951 /* ShotType.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C50CF91774E2800094B951 /* ShotType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +59,8 @@
 		7EE9CC71175B88C00068B9DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7EFB6505175B99FA0031122F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		7EFB6506175B99FA0031122F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D3C50CF81774E2800094B951 /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
-		D3C50CF91774E2800094B951 /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
+		D3C50CF81774E2800094B951 /* ShotType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotType.h; sourceTree = "<group>"; };
+		D3C50CF91774E2800094B951 /* ShotType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 				7E07EF681767CFE40029EBBB /* Location.m */,
 				7E07EF641767CFE40029EBBB /* Shot.h */,
 				7E07EF651767CFE40029EBBB /* Shot.m */,
-				D3C50CF81774E2800094B951 /* Club.h */,
-				D3C50CF91774E2800094B951 /* Club.m */,
+				D3C50CF81774E2800094B951 /* ShotType.h */,
+				D3C50CF91774E2800094B951 /* ShotType.m */,
 			);
 			name = "Model Classes";
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 				7E07EF691767CFE40029EBBB /* Location.m in Sources */,
 				7E2B91F0176F9DFC00340D06 /* AddShotTypeVC.m in Sources */,
 				7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */,
-				D3C50CFA1774E2800094B951 /* Club.m in Sources */,
+				D3C50CFA1774E2800094B951 /* ShotType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

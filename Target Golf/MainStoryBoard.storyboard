@@ -58,7 +58,7 @@
                                 </state>
                                 <connections>
                                     <action selector="setShotTypeButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="KEj-3K-Iah"/>
-                                    <segue destination="mvw-iV-5qB" kind="push" identifier="Select Shot" id="GAZ-Nf-TF5"/>
+                                    <segue destination="mvw-iV-5qB" kind="push" identifier="Select ShotType" id="GAZ-Nf-TF5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfv-d4-OTw">
@@ -188,7 +188,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE1-AH-zrJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Club" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE1-AH-zrJ">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -266,6 +266,37 @@
             <point key="canvasLocation" x="247" y="22"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddShotTypeVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddShotTypeVC.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="saveButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="clubSwingLengthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="clubTypeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ShotTypeTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShotTypeTVC.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
