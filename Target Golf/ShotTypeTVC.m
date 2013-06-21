@@ -26,6 +26,7 @@
     
     self.navigationItem.hidesBackButton = FALSE;
     
+    
     NSError *error;
     
     if (![[self fetchedResultsController] performFetch:&error]) {

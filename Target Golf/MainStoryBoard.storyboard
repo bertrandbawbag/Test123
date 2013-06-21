@@ -21,12 +21,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-sK-UQC">
-                                <color key="backgroundColor" red="0.43542395229999997" green="1" blue="0.76017592960000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="6rl-rv-xS8"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtH-Si-hCS">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Set Target">
@@ -88,14 +82,24 @@
                                     <action selector="setBallLocationButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="0Ys-SF-r1f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-tl-B22">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="imageButton">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GzJ-sK-UQC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1cc-8f-XLC"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IF-tg-1iq"/>
-                            <constraint firstItem="GzJ-sK-UQC" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="I8c-xt-cRL"/>
-                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="GzJ-sK-UQC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KbV-Km-4E9"/>
                             <constraint firstItem="cfv-d4-OTw" firstAttribute="top" secondItem="Dnk-du-hwF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TIx-mM-f1z"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="cxa-tl-B22" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VR8-wK-Gtq"/>
+                            <constraint firstItem="cxa-tl-B22" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Xx3-7t-7VX"/>
+                            <constraint firstAttribute="trailing" secondItem="cxa-tl-B22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dBQ-rx-Dd1"/>
                             <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="h5G-p8-Bki"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mec-3J-YTF"/>
                             <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mkE-zL-25p"/>
@@ -106,6 +110,7 @@
                             <constraint firstItem="kBi-4a-TaA" firstAttribute="top" secondItem="cfv-d4-OTw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sy1-cz-041"/>
                             <constraint firstAttribute="trailing" secondItem="Dnk-du-hwF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w7P-AZ-det"/>
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wUl-Qn-SiP"/>
+                            <constraint firstItem="cxa-tl-B22" firstAttribute="leading" secondItem="odB-rj-tGd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yJL-qp-iwV"/>
                             <constraint firstAttribute="trailing" secondItem="DtH-Si-hCS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zHe-AV-NbI"/>
                         </constraints>
                     </view>
