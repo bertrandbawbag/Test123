@@ -18,7 +18,11 @@
 
 
 @property (nonatomic, strong) id <AddShotTypeVCDelegate> delegate;
-@property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) ShotType *shotType;
+
+@property (weak, nonatomic) IBOutlet UITextField *clubLabel;
+@property (weak, nonatomic) IBOutlet UITextField *lengthLabel;
+
 
 - (IBAction)saveButtonPressed:(UIBarButtonItem *)sender;
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;

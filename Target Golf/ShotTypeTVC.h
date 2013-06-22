@@ -10,9 +10,9 @@
 #import "ShotType.h"
 
 @protocol ShotTypeTVCDelegate;
+@protocol AddShotTypeVCDelegate;
 
-
-@interface ShotTypeTVC : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface ShotTypeTVC : UITableViewController <NSFetchedResultsControllerDelegate, AddShotTypeVCDelegate>
 {
 }
 @property (nonatomic, weak) id <ShotTypeTVCDelegate> delegate;

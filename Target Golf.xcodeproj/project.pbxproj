@@ -115,6 +115,7 @@
 				D30D5E021764C37D009F2639 /* View Controllers */,
 				D30D5E031764C3E2009F2639 /* Model Classes */,
 				D3C50CFB1774EC3F0094B951 /* ApplicationDelegate */,
+				D3CFD3431775984500C7F02D /* Deprecated */,
 				7EE9CC56175B85760068B9DA /* Supporting Files */,
 			);
 			path = "Target Golf";
@@ -141,8 +142,6 @@
 				7EFB6506175B99FA0031122F /* MainViewController.m */,
 				7E46856C1770F1BB00DD5647 /* ShotTypeTVC.h */,
 				7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */,
-				7E517F5F1767C47B005F1483 /* ShotTypeDetailTVC.h */,
-				7E517F601767C47B005F1483 /* ShotTypeDetailTVC.m */,
 				7E2B91EE176F9DFC00340D06 /* AddShotTypeVC.h */,
 				7E2B91EF176F9DFC00340D06 /* AddShotTypeVC.m */,
 			);
@@ -178,6 +177,15 @@
 				7EE9CC67175B857F0068B9DA /* Target_Golf.xcdatamodeld */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D3CFD3431775984500C7F02D /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				7E517F5F1767C47B005F1483 /* ShotTypeDetailTVC.h */,
+				7E517F601767C47B005F1483 /* ShotTypeDetailTVC.m */,
+			);
+			name = Deprecated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

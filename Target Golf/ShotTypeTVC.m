@@ -8,6 +8,7 @@
 
 #import "ShotTypeTVC.h"
 #import "ShotType.h"
+#import "AddShotTypeVC.h"
 
 @interface ShotTypeTVC ()
 
@@ -53,21 +54,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    // Configure the cell to show the book's title
-    ShotType *shotType = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@",shotType.club]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", shotType.length]];
-    
-    if ([self.checkedCell isEqual:indexPath]) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else  {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
-}
+
 
 #pragma mark - Table view data source
 
@@ -152,6 +139,22 @@
         self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
         self.rightBarButtonItem = nil;
     }
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    // Configure the cell to show the book's title
+    ShotType *shotType = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@",shotType.club]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", shotType.length]];
+    
+    if ([self.checkedCell isEqual:indexPath]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else  {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
 }
 
 #pragma mark - Table view delegate
@@ -265,5 +268,37 @@
     [self.tableView endUpdates];
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Add Shot Type"])
+    {
+        // Get reference to the destination view controller
+        AddShotTypeVC *vc = [segue destinationViewController];
+        
+        // add the new entity
+        self.currentShotType = (ShotType *)[NSEntityDescription insertNewObjectForEntityForName:@"ShotType" inManagedObjectContext:self.context];
+        
+        // Pass any objects to the view controller here, like...
+        
+        [vc setDelegate:self];
+        [vc setShotType:self.currentShotType];
+        
+    }}
+
+-(void)addShotTypeVC:(AddShotTypeVC *)controller didFinishWithSave:(BOOL)save
+{
+    if (save) {
+        NSError *error;
+        if(![self.context save:&error])  {
+            // TODO: Proper error handling
+            NSLog(@"Unresolved error %@, %@",error,[error userInfo]);
+            abort();
+        }
+    } else if (!save)   {
+        
+        
+    }
+}
 
 @end

@@ -106,12 +106,12 @@
     if ([[segue identifier] isEqualToString:@"Select Shot"])
     {
         // Get reference to the destination view controller
-        AddShotTypeVC *vc = [segue destinationViewController];
+        // AddShotTypeVC *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
         
-        [vc setCurrentShotType:[self currentShotType]];
-        [vc setContext:[self context]];
+        // [vc setCurrentShotType:[self currentShotType]];
+        // [vc setContext:[self context]];
     }
 }
 
@@ -176,16 +176,16 @@
 
 - (IBAction)unwindFromAddClubCancel:(UIStoryboardSegue *)segue {
     
-    AddShotTypeVC *sourceVC = segue.sourceViewController;
+    // AddShotTypeVC *sourceVC = segue.sourceViewController;
     
 }
 
 - (IBAction)unwindFromAddClubSave:(UIStoryboardSegue *)segue {
     
-    AddShotTypeVC *sourceVC = segue.sourceViewController;
+    // AddShotTypeVC *sourceVC = segue.sourceViewController;
     
-    self.currentShotType.club = sourceVC.clubTypeTextField.text;
-    self.currentShotType.length = sourceVC.clubSwingLengthTextField.text;
+    // self.currentShotType.club = sourceVC.clubTypeTextField.text;
+    // self.currentShotType.length = sourceVC.clubSwingLengthTextField.text;
     self.currentShotType.lastUsed = [NSDate date];
 
     NSError *error = nil;

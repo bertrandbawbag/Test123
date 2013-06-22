@@ -18,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden = NO;
+  
 	
     
 }
@@ -33,17 +36,21 @@
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
+    self.shotType.club = self.clubLabel.text;
+    self.shotType.length = self.lengthLabel.text;
+    
+    [self.navigationController popViewControllerAnimated:YES];
     [self.delegate addShotTypeVC:self didFinishWithSave:YES];
     
+    
 }
 
--(void)cancelButtonPressed:(UIBarButtonItem *)sender
+- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 {
+    
+    // TODO: What happens if i start making club then change my mind?? delete the entity?
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    [self.delegate addShotTypeVC:self didFinishWithSave:NO];
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 @end

@@ -31,13 +31,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
-    currentShotType = (ShotType *)[NSEntityDescription insertNewObjectForEntityForName:@"ShotType" inManagedObjectContext:self.context];
-    currentTeeLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
-    currentTargetLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
-    currentBallLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
-
-    
     [self.locationManager startUpdatingLocation];
 }
 
@@ -102,8 +95,7 @@
 
 -(void) convertCLLocation:(CLLocation *) clLocation ToLocation:(Location *) newLocation
 {
-    
-    
+ 
     CLLocationCoordinate2D coordinate = [clLocation coordinate];
     
     [newLocation setLatitude:[NSNumber numberWithDouble:coordinate.latitude]];
@@ -123,8 +115,6 @@
         return;
     }
 
-    [self convertCLLocation:currentTargetCoreLocation ToLocation:currentTargetLocation];
-    
     [self.setTargetLocationButtonOutlet    setTitle:[NSString stringWithFormat:@"%@ %@", currentTargetLocation.latitude, currentTargetLocation.longitude] forState:UIControlStateNormal];
     
 }
@@ -137,9 +127,7 @@
         return;
     }
     
-    [self convertCLLocation:currentTeeCoreLocation ToLocation:currentTeeLocation];
-    
-    [self.setTeeLocationButtonOutlet setTitle:[NSString stringWithFormat:@"%@ %@", currentTeeLocation.latitude, currentTeeLocation.longitude] forState:UIControlStateNormal];
+    [self.setTeeLocationButtonOutlet setTitle:[NSString stringWithFormat:@"%f %f", currentTeeCoreLocation.coordinate.latitude, currentTeeCoreLocation.coordinate.longitude] forState:UIControlStateNormal];
     
     self.setBallLocationButtonOutlet.enabled = YES;
 
@@ -153,11 +141,19 @@
         return;
     }
     
-
+    // add the new entities to make up a shot
     Shot *shot = (Shot *)[NSEntityDescription insertNewObjectForEntityForName:@"Shot" inManagedObjectContext:self.context];
-    
+    currentShotType = (ShotType *)[NSEntityDescription insertNewObjectForEntityForName:@"ShotType" inManagedObjectContext:self.context];
+    currentTeeLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
+    currentTargetLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
+    currentBallLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
+
+    // convert the core locations into core data locations
     [self convertCLLocation:location ToLocation:currentBallLocation];
+    [self convertCLLocation:currentTeeCoreLocation ToLocation:currentTeeLocation];
+    [self convertCLLocation:currentTargetCoreLocation ToLocation:currentTargetLocation];
     
+    // build the shot object
     shot.ballLocation = currentBallLocation;
     shot.teeLocation = currentTeeLocation;
     shot.targetLocation = currentTargetLocation;
@@ -183,8 +179,6 @@
         // Handle the error.
     }
 
-    
-    
     NSLog(@"%@",shot.description);
     
 }
