@@ -14,9 +14,6 @@
 
 @interface AddShotTypeVC : UIViewController
 
-
-
-
 @property (nonatomic, strong) id <AddShotTypeVCDelegate> delegate;
 @property (nonatomic, strong) ShotType *shotType;
 
