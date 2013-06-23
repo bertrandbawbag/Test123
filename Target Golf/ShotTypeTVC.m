@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-// TODO: Automatically select new shottype - add shottype delegate
+// TODO: Retain selection following return to shottype TVC from main view controoler
 // TODO: Ensure shottype does not already exist when adding new one - add shottype delegate
 
 #import "ShotTypeTVC.h"
