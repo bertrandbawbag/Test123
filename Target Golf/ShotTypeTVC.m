@@ -172,7 +172,12 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     
-    if(self.checkedCell)   {
+    [self tableview:tableView updateSelectedCell:indexPath]; 
+}
+
+-(void) tableview:(UITableView *)tableView updateSelectedCell: (NSIndexPath *) indexPath
+{
+     if(self.checkedCell)   {
         UITableViewCell *unCheckCell = [tableView cellForRowAtIndexPath:self.checkedCell];
         unCheckCell.accessoryType = UITableViewCellAccessoryNone;
     }
@@ -181,7 +186,6 @@
     self.checkedCell = indexPath;
     
     [self.delegate selectedShotType: (ShotType *) [self.fetchedResultsController objectAtIndexPath:indexPath]];
- 
 }
 
 #pragma mark - Fetched Results Controller
@@ -298,10 +302,17 @@
             // TODO: Proper error handling
             NSLog(@"Unresolved error %@, %@",error,[error userInfo]);
             abort();
+        } else{ 
+            // select the newly created object
+            
+            NSIndexPath *indexpath = [[NSIndexPath alloc]init];
+            indexpath = [self.fetchedResultsController indexPathForObject:self.currentShotType];
+            
+            [self tableview:self.tableView updateSelectedCell:indexpath];
         }
+        
     } else if (!save)   {
-        
-        
+        [self.context deleteObject:self.currentShotType];
     }
 }
 
