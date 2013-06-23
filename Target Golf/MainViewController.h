@@ -21,7 +21,6 @@
     Location *currentBallLocation;
     ShotType *currentShotType;
     
-    
     CLLocation *currentTeeCoreLocation;
     CLLocation *currentTargetCoreLocation;
 

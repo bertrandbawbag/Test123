@@ -6,6 +6,10 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
+// TODO: Stop adding shottype entity when logging ball - just needs to be linked
+// TODO: better text in tee and target buttons
+// TODO: lastUsed date handling to be implemented. When to do this?
+
 #import "MainViewController.h"
 
 
@@ -141,9 +145,8 @@
         return;
     }
     
-    // add the new entities to make up a shot
+    // add the new entities to make up a shot - entity for shot type already exists
     Shot *shot = (Shot *)[NSEntityDescription insertNewObjectForEntityForName:@"Shot" inManagedObjectContext:self.context];
-    currentShotType = (ShotType *)[NSEntityDescription insertNewObjectForEntityForName:@"ShotType" inManagedObjectContext:self.context];
     currentTeeLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
     currentTargetLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
     currentBallLocation = (Location *) [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.context];
@@ -152,6 +155,9 @@
     [self convertCLLocation:location ToLocation:currentBallLocation];
     [self convertCLLocation:currentTeeCoreLocation ToLocation:currentTeeLocation];
     [self convertCLLocation:currentTargetCoreLocation ToLocation:currentTargetLocation];
+    
+    // update the lastUsed date for the club - this will bring it to the top of the list in the slection table
+    currentShotType.lastUsed = [NSDate date];
     
     // build the shot object
     shot.ballLocation = currentBallLocation;
@@ -173,7 +179,6 @@
     shot.ballDistanceFromTee = [NSNumber numberWithDouble:distanceFromTee];
     shot.ballDistanceFromTarget = [NSNumber numberWithDouble:[location distanceFromLocation:currentTargetCoreLocation]];
     
-
     NSError *error = nil;
     if (![self.context save:&error]) {
         // Handle the error.
@@ -188,7 +193,7 @@
     
 }
 
-// delegate to get currently selected club
+// ShottypeTVD delegate to get currently selected club
 - (void) selectedShotType: (ShotType *) shotType;
 {
     currentShotType = shotType;

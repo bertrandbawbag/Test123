@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
+// TODO: Automatically select new shottype - add shottype delegate
+// TODO: Ensure shottype does not already exist when adding new one - add shottype delegate
+
 #import "ShotTypeTVC.h"
 #import "ShotType.h"
 #import "AddShotTypeVC.h"
@@ -289,6 +292,7 @@
 -(void)addShotTypeVC:(AddShotTypeVC *)controller didFinishWithSave:(BOOL)save
 {
     if (save) {
+        
         NSError *error;
         if(![self.context save:&error])  {
             // TODO: Proper error handling
