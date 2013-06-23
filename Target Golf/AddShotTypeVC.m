@@ -38,6 +38,7 @@
     
     self.shotType.club = self.clubLabel.text;
     self.shotType.length = self.lengthLabel.text;
+    self.shotType.lastUsed = [NSDate date];
     
     [self.navigationController popViewControllerAnimated:YES];
     [self.delegate addShotTypeVC:self didFinishWithSave:YES];

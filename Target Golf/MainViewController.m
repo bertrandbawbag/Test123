@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Claire Wright. All rights reserved.
 //
 
-// TODO: Stop adding shottype entity when logging ball - just needs to be linked
+// TODO: Stop adding shottype entity when logging ball - just needs to be linked - Done
 // TODO: better text in tee and target buttons
 // TODO: lastUsed date handling to be implemented. When to do this?
 
@@ -156,7 +156,7 @@
     [self convertCLLocation:currentTeeCoreLocation ToLocation:currentTeeLocation];
     [self convertCLLocation:currentTargetCoreLocation ToLocation:currentTargetLocation];
     
-    // update the lastUsed date for the club - this will bring it to the top of the list in the slection table
+    // update the lastUsed date for the club - this will bring it to the top of the list in the selection table
     currentShotType.lastUsed = [NSDate date];
     
     // build the shot object
