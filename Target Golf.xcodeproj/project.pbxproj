@@ -261,7 +261,6 @@
 		7EE9CC41175B85730068B9DA = {
 			isa = PBXGroup;
 			children = (
-				7EA79F36178367B700C814F6 /* QuartzCore.framework */,
 				7EE9CC55175B85750068B9DA /* Target Golf */,
 				7EE9CC4C175B85740068B9DA /* Frameworks */,
 				7EE9CC4B175B85740068B9DA /* Products */,
@@ -279,6 +278,7 @@
 		7EE9CC4C175B85740068B9DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EA79F36178367B700C814F6 /* QuartzCore.framework */,
 				7EE9CC71175B88C00068B9DA /* CoreLocation.framework */,
 				7EE9CC4D175B85740068B9DA /* UIKit.framework */,
 				7EE9CC4F175B85740068B9DA /* Foundation.framework */,

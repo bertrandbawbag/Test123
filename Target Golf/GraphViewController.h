@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
 
 @interface GraphViewController : UIViewController
+
+@property (nonatomic, strong) NSManagedObjectContext *context;
 
 @end

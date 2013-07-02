@@ -11,6 +11,7 @@
 // TODO: lastUsed date handling to be implemented. When to do this?
 
 #import "MainViewController.h"
+#import "GraphViewController.h"
 
 
 @interface MainViewController ()
@@ -63,7 +64,14 @@
         [vc setDelegate:self];
         [vc setContext:[self context]];
         [vc setCurrentShotType:currentShotType];
-    }}
+    }
+    
+    if ([[segue identifier] isEqualToString:@"Show Graph"]) {
+        GraphViewController *vc = [segue destinationViewController];
+        
+        [vc setContext:[self context]];
+    }
+}
 
 #pragma mark - Core Location
 

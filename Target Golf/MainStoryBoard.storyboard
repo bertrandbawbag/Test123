@@ -98,7 +98,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="InN-IO-smt" kind="push" id="Sfi-bz-ANb"/>
+                                    <segue destination="InN-IO-smt" kind="push" identifier="Show Graph" id="Sfi-bz-ANb"/>
                                 </connections>
                             </button>
                         </subviews>
