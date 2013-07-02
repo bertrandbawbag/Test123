@@ -22,6 +22,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtH-Si-hCS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="sNS-QI-kwt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Set Target">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,26 +85,39 @@
                                     <action selector="setBallLocationButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="0Ys-SF-r1f"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpP-BV-JF0">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVY-DI-ric">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="286" id="2qx-ky-W5m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="InN-IO-smt" kind="push" id="Sfi-bz-ANb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IF-tg-1iq"/>
-                            <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="LpP-BV-JF0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6PW-5Q-gaN"/>
-                            <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="LpP-BV-JF0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="8Yc-wU-U1n"/>
+                            <constraint firstItem="DVY-DI-ric" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="127" id="4BJ-7E-onK"/>
+                            <constraint firstItem="DVY-DI-ric" firstAttribute="baseline" secondItem="DtH-Si-hCS" secondAttribute="baseline" type="default" id="Frg-QK-gVA"/>
+                            <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="DVY-DI-ric" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="HF1-of-9WC"/>
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="200" id="MGp-Db-lbG"/>
                             <constraint firstAttribute="bottom" secondItem="cfv-d4-OTw" secondAttribute="bottom" constant="159" id="MMN-j7-94m"/>
                             <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="odB-rj-tGd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="N2t-wP-bhn"/>
-                            <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="LpP-BV-JF0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OOo-CP-xx8"/>
-                            <constraint firstAttribute="bottom" secondItem="LpP-BV-JF0" secondAttribute="bottom" constant="90" id="Psp-aa-gws"/>
-                            <constraint firstItem="LpP-BV-JF0" firstAttribute="top" secondItem="DtH-Si-hCS" secondAttribute="top" type="default" id="VIh-qR-7me"/>
-                            <constraint firstItem="LpP-BV-JF0" firstAttribute="bottom" secondItem="kBi-4a-TaA" secondAttribute="bottom" type="default" id="gQe-PE-c8m"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="DVY-DI-ric" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="P4N-sD-fKI"/>
+                            <constraint firstItem="DVY-DI-ric" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QJh-T3-3Wf"/>
+                            <constraint firstItem="DVY-DI-ric" firstAttribute="top" secondItem="DtH-Si-hCS" secondAttribute="top" type="default" id="e2v-A2-wzY"/>
                             <constraint firstItem="kBi-4a-TaA" firstAttribute="centerX" secondItem="cfv-d4-OTw" secondAttribute="centerX" type="default" id="iRX-H2-yA9"/>
-                            <constraint firstItem="LpP-BV-JF0" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="128" id="jW0-Oz-4pi"/>
+                            <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="DVY-DI-ric" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lV4-cW-aZJ"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mec-3J-YTF"/>
-                            <constraint firstItem="LpP-BV-JF0" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nBW-mm-SmM"/>
+                            <constraint firstItem="DVY-DI-ric" firstAttribute="bottom" secondItem="kBi-4a-TaA" secondAttribute="bottom" type="default" id="oQh-Ne-IyT"/>
                             <constraint firstAttribute="trailing" secondItem="kBi-4a-TaA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r3X-MO-jaB"/>
                             <constraint firstAttribute="trailing" secondItem="Dnk-du-hwF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w7P-AZ-det"/>
                             <constraint firstAttribute="trailing" secondItem="DtH-Si-hCS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zHe-AV-NbI"/>
@@ -119,6 +135,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3r-f6-fRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773" y="22"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="mmz-sR-jiR">
+            <objects>
+                <viewController id="InN-IO-smt" customClass="GraphViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tGd-3E-EoC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9YZ-5s-id8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wse-tp-hre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="-706"/>
         </scene>
         <!--Shot TypeTVC-->
         <scene sceneID="Da5-ss-5rb">
@@ -258,37 +289,6 @@
             <point key="canvasLocation" x="247" y="22"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddShotTypeVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddShotTypeVC.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="saveButtonPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="clubLabel" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lengthLabel" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ShotTypeTVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShotTypeTVC.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
