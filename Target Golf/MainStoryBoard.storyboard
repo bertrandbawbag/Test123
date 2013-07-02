@@ -82,35 +82,26 @@
                                     <action selector="setBallLocationButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="0Ys-SF-r1f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-tl-B22">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="286" id="TIo-j3-IiJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="imageButton">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpP-BV-JF0">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IF-tg-1iq"/>
-                            <constraint firstItem="kBi-4a-TaA" firstAttribute="bottom" secondItem="cxa-tl-B22" secondAttribute="bottom" type="default" id="3KU-p7-c3G"/>
-                            <constraint firstItem="DtH-Si-hCS" firstAttribute="top" secondItem="cxa-tl-B22" secondAttribute="top" type="default" id="86c-h1-3oO"/>
+                            <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="LpP-BV-JF0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6PW-5Q-gaN"/>
+                            <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="LpP-BV-JF0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="8Yc-wU-U1n"/>
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="200" id="MGp-Db-lbG"/>
                             <constraint firstAttribute="bottom" secondItem="cfv-d4-OTw" secondAttribute="bottom" constant="159" id="MMN-j7-94m"/>
                             <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="odB-rj-tGd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="N2t-wP-bhn"/>
-                            <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="cxa-tl-B22" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PoY-tV-qyW"/>
-                            <constraint firstItem="cxa-tl-B22" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="128" id="WdG-kb-FnP"/>
-                            <constraint firstItem="cxa-tl-B22" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Wqc-3d-d8M"/>
-                            <constraint firstItem="kBi-4a-TaA" firstAttribute="leading" secondItem="cxa-tl-B22" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eW0-ON-GZg"/>
+                            <constraint firstItem="Dnk-du-hwF" firstAttribute="leading" secondItem="LpP-BV-JF0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OOo-CP-xx8"/>
+                            <constraint firstAttribute="bottom" secondItem="LpP-BV-JF0" secondAttribute="bottom" constant="90" id="Psp-aa-gws"/>
+                            <constraint firstItem="LpP-BV-JF0" firstAttribute="top" secondItem="DtH-Si-hCS" secondAttribute="top" type="default" id="VIh-qR-7me"/>
+                            <constraint firstItem="LpP-BV-JF0" firstAttribute="bottom" secondItem="kBi-4a-TaA" secondAttribute="bottom" type="default" id="gQe-PE-c8m"/>
                             <constraint firstItem="kBi-4a-TaA" firstAttribute="centerX" secondItem="cfv-d4-OTw" secondAttribute="centerX" type="default" id="iRX-H2-yA9"/>
+                            <constraint firstItem="LpP-BV-JF0" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="128" id="jW0-Oz-4pi"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="top" secondItem="l8q-yo-Clt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mec-3J-YTF"/>
-                            <constraint firstItem="DtH-Si-hCS" firstAttribute="leading" secondItem="cxa-tl-B22" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qdx-mP-hhi"/>
+                            <constraint firstItem="LpP-BV-JF0" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nBW-mm-SmM"/>
                             <constraint firstAttribute="trailing" secondItem="kBi-4a-TaA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r3X-MO-jaB"/>
                             <constraint firstAttribute="trailing" secondItem="Dnk-du-hwF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w7P-AZ-det"/>
                             <constraint firstAttribute="trailing" secondItem="DtH-Si-hCS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zHe-AV-NbI"/>
