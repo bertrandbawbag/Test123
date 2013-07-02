@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CorePlot-CocoaTouch.h"
+#import "ShotType.h"
 
 @interface GraphViewController : UIViewController <CPTPlotDataSource>
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) ShotType *currentShotType;
 
 @end

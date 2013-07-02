@@ -70,6 +70,7 @@
         GraphViewController *vc = [segue destinationViewController];
         
         [vc setContext:[self context]];
+        [vc setCurrentShotType:currentShotType];
     }
 }
 
