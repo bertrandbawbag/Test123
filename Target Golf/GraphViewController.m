@@ -19,7 +19,7 @@
 -(void)configureHost;
 -(void)configureGraph;
 -(void)configurePlot;
--(void)configureLegend;
+-(void)configureAxes;
 
 @property (nonatomic, strong) NSArray *dataSource;
 
@@ -112,7 +112,7 @@
     [self configureHost];
     [self configureGraph];
     [self configurePlot];
-    [self configureLegend];
+    [self configureAxes];
 }
 
 -(void)configureHost {
@@ -202,11 +202,109 @@
     aaplSymbol.lineStyle = aaplSymbolLineStyle;
     aaplSymbol.size = CGSizeMake(6.0f, 6.0f);
     shotTypePlot.plotSymbol = aaplSymbol;
-    
-    
+
 }
 
--(void)configureLegend {
+-(void)configureAxes
+{
+    
+    // 1 - Create styles
+    CPTMutableTextStyle *axisTitleStyle = [CPTMutableTextStyle textStyle];
+    axisTitleStyle.color = [CPTColor blueColor];
+    axisTitleStyle.fontName = @"Helvetica-Bold";
+    axisTitleStyle.fontSize = 12.0f;
+    
+    CPTMutableLineStyle *axisLineStyle = [CPTMutableLineStyle lineStyle];
+    axisLineStyle.lineWidth = 2.0f;
+    axisLineStyle.lineColor = [CPTColor blueColor];
+    
+    CPTMutableTextStyle *axisTextStyle = [[CPTMutableTextStyle alloc] init];
+    axisTextStyle.color = [CPTColor blueColor];
+    axisTextStyle.fontName = @"Helvetica-Bold";
+    axisTextStyle.fontSize = 11.0f;
+    
+    CPTMutableLineStyle *tickLineStyle = [CPTMutableLineStyle lineStyle];
+    tickLineStyle.lineColor = [CPTColor blueColor];
+    tickLineStyle.lineWidth = 2.0f;
+    
+    CPTMutableLineStyle *gridLineStyle = [CPTMutableLineStyle lineStyle];
+    tickLineStyle.lineColor = [CPTColor blueColor];
+    tickLineStyle.lineWidth = 1.0f;
+    
+    // 2 - Get axis set
+    CPTXYAxisSet *axisSet = (CPTXYAxisSet *) self.hostingView.hostedGraph.axisSet;
+    
+    // 3 - Configure x-axis
+    CPTAxis *x = axisSet.xAxis;
+    x.title = @"X";
+    x.titleTextStyle = axisTitleStyle;
+    x.titleOffset = 15.0f;
+    x.axisLineStyle = axisLineStyle;
+    x.labelingPolicy = CPTAxisLabelingPolicyNone;
+    x.labelTextStyle = axisTextStyle;
+    x.majorTickLineStyle = axisLineStyle;
+    x.majorTickLength = 4.0f;
+    x.tickDirection = CPTSignNegative;
+    
+    
+    
+/*
+    CGFloat pointCount = [self.dataSource count];
+    NSMutableSet *xLabels = [NSMutableSet setWithCapacity:pointCount];
+    NSMutableSet *xLocations = [NSMutableSet setWithCapacity:pointCount];
+    NSInteger i = 0;
+    for (NSString *date in [[CPDStockPriceStore sharedInstance] datesInMonth]) {
+        CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:date  textStyle:x.labelTextStyle];
+        CGFloat location = i++;
+        label.tickLocation = CPTDecimalFromCGFloat(location);
+        label.offset = x.majorTickLength;
+        if (label) {
+            [xLabels addObject:label];
+            [xLocations addObject:[NSNumber numberWithFloat:location]];
+        }
+    }
+    x.axisLabels = xLabels;
+    x.majorTickLocations = xLocations;
+ */
+    
+    // 4 - Configure y-axis
+    CPTAxis *y = axisSet.yAxis;
+    y.title = @"Y";
+    y.titleTextStyle = axisTitleStyle;
+    y.titleOffset = -40.0f;
+    y.axisLineStyle = axisLineStyle;
+    y.majorGridLineStyle = gridLineStyle;
+    y.labelingPolicy = CPTAxisLabelingPolicyNone;
+    y.labelTextStyle = axisTextStyle;
+    y.labelOffset = 16.0f;
+    y.majorTickLineStyle = axisLineStyle;
+    y.majorTickLength = 4.0f;
+    y.minorTickLength = 2.0f;
+    y.tickDirection = CPTSignPositive;
+    NSInteger majorIncrement = 100;
+    NSInteger minorIncrement = 50;
+    CGFloat yMax = 700.0f;  // should determine dynamically based on max price
+    NSMutableSet *yLabels = [NSMutableSet set];
+    NSMutableSet *yMajorLocations = [NSMutableSet set];
+    NSMutableSet *yMinorLocations = [NSMutableSet set];
+    for (NSInteger j = minorIncrement; j <= yMax; j += minorIncrement) {
+        NSUInteger mod = j % majorIncrement;
+        if (mod == 0) {
+            CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%i", j] textStyle:y.labelTextStyle];
+            NSDecimal location = CPTDecimalFromInteger(j);
+            label.tickLocation = location;
+            label.offset = -y.majorTickLength - y.labelOffset;
+            if (label) {
+                [yLabels addObject:label];
+            }
+            [yMajorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:location]];
+        } else {
+            [yMinorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInteger(j)]];
+        }
+    }
+    y.axisLabels = yLabels;    
+    y.majorTickLocations = yMajorLocations;
+    y.minorTickLocations = yMinorLocations;
 }
 
 #pragma mark - Getters and Setters

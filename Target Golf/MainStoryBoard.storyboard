@@ -143,7 +143,7 @@
                     <view key="view" contentMode="scaleToFill" id="tGd-3E-EoC">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="9YZ-5s-id8"/>
                 </viewController>
@@ -289,6 +289,40 @@
             <point key="canvasLocation" x="247" y="22"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddShotTypeVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddShotTypeVC.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="saveButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="clubLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lengthLabel" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="GraphViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setBallLocationButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setShotTypeButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTargetButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="setTeeButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="setBallLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setShotTypeButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTargetLocationButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTeeLocationButtonOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ShotTypeTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShotTypeTVC.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
