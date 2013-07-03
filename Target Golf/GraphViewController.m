@@ -7,6 +7,9 @@
 //
 
 #import "GraphViewController.h"
+#import "Shot.h"
+#import "Location.h"
+#import "ShotType.h"
 
 @interface GraphViewController ()
 
@@ -15,8 +18,10 @@
 -(void)initPlot;
 -(void)configureHost;
 -(void)configureGraph;
--(void)configureChart;
+-(void)configurePlot;
 -(void)configureLegend;
+
+@property (nonatomic, strong) NSArray *dataSource;
 
 @end
 
@@ -40,11 +45,13 @@
 	// Do any additional setup after loading the view.
     
     self.navigationItem.hidesBackButton = NO;
+   
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -57,11 +64,39 @@
 
 #pragma mark - CPTPlotDataSource methods
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
-    return 0;
+    return [self.dataSource count];
 }
 
--(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
-    return 0;
+-(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
+{
+    
+    NSInteger valueCount = [self numberOfRecordsForPlot:plot];
+    Shot *shot = [self.dataSource objectAtIndex:index];
+    
+    switch (fieldEnum) {
+        case CPTScatterPlotFieldX:
+            if (index < valueCount) {
+            
+                double ballX = [shot.ballLocation.latitude doubleValue];
+                double teeX = [shot.teeLocation.latitude doubleValue];
+                
+                NSNumber *xOffset = [NSNumber numberWithDouble:(ballX - teeX)];
+                
+                return xOffset;
+            }
+            break;
+            
+        case CPTScatterPlotFieldY:
+        {
+            double ballY = [shot.ballLocation.longitude doubleValue];
+            double teeY = [shot.teeLocation.longitude doubleValue];
+            
+            NSNumber *yOffset = [NSNumber numberWithDouble:(ballY - teeY)];
+            return yOffset;
+        }
+            break;
+    }
+    return [NSDecimalNumber zero];
 }
 
 -(CPTLayer *)dataLabelForPlot:(CPTPlot *)plot recordIndex:(NSUInteger)index {
@@ -76,7 +111,7 @@
 -(void)initPlot {
     [self configureHost];
     [self configureGraph];
-    [self configureChart];
+    [self configurePlot];
     [self configureLegend];
 }
 
@@ -92,7 +127,7 @@
                             (parentRect.size.height - toolBarSize.height));
     // 2 - Create host view
     self.hostingView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:parentRect];
-    self.hostingView.allowPinchScaling = NO;
+    self.hostingView.allowPinchScaling = YES;
     [self.view addSubview:self.hostingView];
 }
 
@@ -122,10 +157,73 @@
     // [graph applyTheme:self.selectedTheme];
 }
 
--(void)configureChart {
+-(void)configurePlot {
+    
+    // 1 - Get graph and plot space
+    CPTGraph *graph = self.hostingView.hostedGraph;
+    CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *) graph.defaultPlotSpace;
+    
+    // 2 - Create the plot
+    CPTScatterPlot *shotTypePlot = [[CPTScatterPlot alloc] init];
+    shotTypePlot.dataSource = self;
+    shotTypePlot.identifier = nil;
+    CPTColor *shotTypeColor = [CPTColor redColor];
+    [graph addPlot:shotTypePlot toPlotSpace:plotSpace];
+    /*
+    CPTScatterPlot *googPlot = [[CPTScatterPlot alloc] init];
+    googPlot.dataSource = self;
+    googPlot.identifier = CPDTickerSymbolGOOG;
+    CPTColor *googColor = [CPTColor greenColor];
+    [graph addPlot:googPlot toPlotSpace:plotSpace];
+    CPTScatterPlot *msftPlot = [[CPTScatterPlot alloc] init];
+    msftPlot.dataSource = self;
+    msftPlot.identifier = CPDTickerSymbolMSFT;
+    CPTColor *msftColor = [CPTColor blueColor];
+    [graph addPlot:msftPlot toPlotSpace:plotSpace];
+     */
+    
+    // 3 - Set up plot space
+    [plotSpace scaleToFitPlots:[NSArray arrayWithObjects:shotTypePlot, nil]];
+    CPTMutablePlotRange *xRange = [plotSpace.xRange mutableCopy];
+    [xRange expandRangeByFactor:CPTDecimalFromCGFloat(1.1f)];
+    plotSpace.xRange = xRange;
+    CPTMutablePlotRange *yRange = [plotSpace.yRange mutableCopy];
+    [yRange expandRangeByFactor:CPTDecimalFromCGFloat(1.2f)];
+    plotSpace.yRange = yRange;
+    
+    // 4 - Create styles and symbols
+   
+    
+    shotTypePlot.dataLineStyle = nil;
+    CPTMutableLineStyle *aaplSymbolLineStyle = [CPTMutableLineStyle lineStyle];
+    aaplSymbolLineStyle.lineColor = shotTypeColor;
+    CPTPlotSymbol *aaplSymbol = [CPTPlotSymbol ellipsePlotSymbol];
+    aaplSymbol.fill = [CPTFill fillWithColor:shotTypeColor];
+    aaplSymbol.lineStyle = aaplSymbolLineStyle;
+    aaplSymbol.size = CGSizeMake(6.0f, 6.0f);
+    shotTypePlot.plotSymbol = aaplSymbol;
+    
+    
 }
 
 -(void)configureLegend {
+}
+
+#pragma mark - Getters and Setters
+
+-(NSArray *)dataSource
+{
+    if (!_dataSource) {
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Shot" inManagedObjectContext:self.context];
+        [fetchRequest setEntity:entity];
+        
+        NSError *error;
+        _dataSource = [NSArray arrayWithArray:[self.context executeFetchRequest:fetchRequest error:&error]];
+        
+    }
+    return _dataSource;
 }
 
 @end
