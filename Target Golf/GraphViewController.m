@@ -136,11 +136,11 @@
     // 1 - Create and initialize graph
     CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.hostingView.bounds];
     self.hostingView.hostedGraph = graph;
-    graph.paddingLeft = 0.0f;
-    graph.paddingTop = 0.0f;
-    graph.paddingRight = 0.0f;
-    graph.paddingBottom = 0.0f;
-    graph.axisSet = nil;
+    graph.paddingLeft = 10.0f;
+    graph.paddingTop = 10.0f;
+    graph.paddingRight = 10.0f;
+    graph.paddingBottom = 10.0f;
+    
     // 2 - Set up text style
     CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
     textStyle.color = [CPTColor grayColor];
@@ -246,15 +246,12 @@
     x.majorTickLength = 4.0f;
     x.tickDirection = CPTSignNegative;
     
-    
-    
-/*
     CGFloat pointCount = [self.dataSource count];
     NSMutableSet *xLabels = [NSMutableSet setWithCapacity:pointCount];
     NSMutableSet *xLocations = [NSMutableSet setWithCapacity:pointCount];
     NSInteger i = 0;
-    for (NSString *date in [[CPDStockPriceStore sharedInstance] datesInMonth]) {
-        CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:date  textStyle:x.labelTextStyle];
+    for (Shot *shot in self.dataSource) {
+        CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[shot.teeLocation.latitude stringValue]  textStyle:x.labelTextStyle];
         CGFloat location = i++;
         label.tickLocation = CPTDecimalFromCGFloat(location);
         label.offset = x.majorTickLength;
@@ -265,7 +262,7 @@
     }
     x.axisLabels = xLabels;
     x.majorTickLocations = xLocations;
- */
+ 
     
     // 4 - Configure y-axis
     CPTAxis *y = axisSet.yAxis;
