@@ -136,10 +136,10 @@
     // 1 - Create and initialize graph
     CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.hostingView.bounds];
     self.hostingView.hostedGraph = graph;
-    graph.paddingLeft = 10.0f;
-    graph.paddingTop = 10.0f;
-    graph.paddingRight = 10.0f;
-    graph.paddingBottom = 10.0f;
+    graph.paddingLeft = 0.0f;
+    graph.paddingTop = 0.0f;
+    graph.paddingRight = 0.0f;
+    graph.paddingBottom = 0.0f;
     
     // 2 - Set up text style
     CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
@@ -169,18 +169,6 @@
     shotTypePlot.identifier = nil;
     CPTColor *shotTypeColor = [CPTColor redColor];
     [graph addPlot:shotTypePlot toPlotSpace:plotSpace];
-    /*
-    CPTScatterPlot *googPlot = [[CPTScatterPlot alloc] init];
-    googPlot.dataSource = self;
-    googPlot.identifier = CPDTickerSymbolGOOG;
-    CPTColor *googColor = [CPTColor greenColor];
-    [graph addPlot:googPlot toPlotSpace:plotSpace];
-    CPTScatterPlot *msftPlot = [[CPTScatterPlot alloc] init];
-    msftPlot.dataSource = self;
-    msftPlot.identifier = CPDTickerSymbolMSFT;
-    CPTColor *msftColor = [CPTColor blueColor];
-    [graph addPlot:msftPlot toPlotSpace:plotSpace];
-     */
     
     // 3 - Set up plot space
     [plotSpace scaleToFitPlots:[NSArray arrayWithObjects:shotTypePlot, nil]];
