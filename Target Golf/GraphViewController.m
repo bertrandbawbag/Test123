@@ -150,7 +150,7 @@
     NSString *title = [NSString stringWithFormat:@"%@ %@", self.currentShotType.club, self.currentShotType.length];
     graph.title = title;
     graph.titleTextStyle = textStyle;
-    graph.titlePlotAreaFrameAnchor = CPTRectAnchorTop;
+    graph.titlePlotAreaFrameAnchor = CPTRectAnchorCenter;
     graph.titleDisplacement = CGPointMake(0.0f, -12.0f);
     // 4 - Set theme
     // self.selectedTheme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
@@ -301,6 +301,12 @@
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Shot" inManagedObjectContext:self.context];
         [fetchRequest setEntity:entity];
+
+        NSLog(@"%@",self.currentShotType.club);
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                                  @"shotType.club MATCHES %@", self.currentShotType.club];
+        
+        [fetchRequest setPredicate:predicate];
         
         NSError *error;
         _dataSource = [NSArray arrayWithArray:[self.context executeFetchRequest:fetchRequest error:&error]];
