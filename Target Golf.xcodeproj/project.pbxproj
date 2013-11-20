@@ -10,6 +10,7 @@
 		7E07EF661767CFE40029EBBB /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF651767CFE40029EBBB /* Shot.m */; };
 		7E07EF691767CFE40029EBBB /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E07EF681767CFE40029EBBB /* Location.m */; };
 		7E2B91F0176F9DFC00340D06 /* AddShotTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B91EF176F9DFC00340D06 /* AddShotTypeVC.m */; };
+		7E36AB5A183ABD60009E7060 /* GPXCreator-2013-11-18 20:59:19 +0000.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7E36AB59183ABD60009E7060 /* GPXCreator-2013-11-18 20:59:19 +0000.gpx */; };
 		7E46856E1770F1BB00DD5647 /* ShotTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */; };
 		7E4CC18B17627D8000A3C651 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */; };
 		7E517F611767C47B005F1483 /* ShotTypeDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E517F601767C47B005F1483 /* ShotTypeDetailTVC.m */; };
@@ -39,6 +40,7 @@
 		7E07EF681767CFE40029EBBB /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		7E2B91EE176F9DFC00340D06 /* AddShotTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShotTypeVC.h; sourceTree = "<group>"; };
 		7E2B91EF176F9DFC00340D06 /* AddShotTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShotTypeVC.m; sourceTree = "<group>"; };
+		7E36AB59183ABD60009E7060 /* GPXCreator-2013-11-18 20:59:19 +0000.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GPXCreator-2013-11-18 20:59:19 +0000.gpx"; sourceTree = "<group>"; };
 		7E46856C1770F1BB00DD5647 /* ShotTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotTypeTVC.h; sourceTree = "<group>"; };
 		7E46856D1770F1BB00DD5647 /* ShotTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotTypeTVC.m; sourceTree = "<group>"; };
 		7E4CC18A17627D8000A3C651 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		7EE9CC41175B85730068B9DA = {
 			isa = PBXGroup;
 			children = (
+				7E36AB59183ABD60009E7060 /* GPXCreator-2013-11-18 20:59:19 +0000.gpx */,
 				7EE9CC55175B85750068B9DA /* Target Golf */,
 				7EE9CC4C175B85740068B9DA /* Frameworks */,
 				7EE9CC4B175B85740068B9DA /* Products */,
@@ -424,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EE9CC5A175B85770068B9DA /* InfoPlist.strings in Resources */,
+				7E36AB5A183ABD60009E7060 /* GPXCreator-2013-11-18 20:59:19 +0000.gpx in Resources */,
 				7EE9CC62175B857B0068B9DA /* Default.png in Resources */,
 				7EE9CC64175B857C0068B9DA /* Default@2x.png in Resources */,
 				7EE9CC66175B857C0068B9DA /* Default-568h@2x.png in Resources */,

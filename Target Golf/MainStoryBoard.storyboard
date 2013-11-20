@@ -68,7 +68,7 @@
                                     <action selector="setBallLocationButton:" destination="yb3-iY-jCS" eventType="touchUpInside" id="0Ys-SF-r1f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVY-DI-ric">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVY-DI-ric">
                                 <rect key="frame" x="20" y="180" width="136" height="368"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,7 +83,6 @@
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="width" secondItem="cfv-d4-OTw" secondAttribute="width" id="6ma-qc-bQM"/>
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="trailing" secondItem="cfv-d4-OTw" secondAttribute="trailing" id="Cvy-uj-MNj"/>
                             <constraint firstItem="k95-Bs-f1b" firstAttribute="top" secondItem="DVY-DI-ric" secondAttribute="bottom" constant="20" id="IaB-dQ-d7N"/>
-                            <constraint firstItem="DVY-DI-ric" firstAttribute="leading" secondItem="l8q-yo-Clt" secondAttribute="leading" constant="20" id="Ip5-1f-7jI"/>
                             <constraint firstItem="Dnk-du-hwF" firstAttribute="trailing" secondItem="kBi-4a-TaA" secondAttribute="trailing" id="aSp-7a-deO"/>
                             <constraint firstItem="DVY-DI-ric" firstAttribute="top" secondItem="odB-rj-tGd" secondAttribute="bottom" constant="20" id="fqP-oo-5Uz"/>
                             <constraint firstItem="odB-rj-tGd" firstAttribute="width" secondItem="DVY-DI-ric" secondAttribute="width" id="k09-Pm-m20"/>
