@@ -110,6 +110,8 @@
     self.setTeeLocationButtonOutlet = NO;
 }
 
+
+
 -(void) convertCLLocation:(CLLocation *) clLocation ToLocation:(Location *) newLocation
 {
  
@@ -134,6 +136,12 @@
 //
 //    [self.setTargetLocationButtonOutlet    setTitle:[NSString stringWithFormat:@"%@ %@", currentTargetLocation.latitude, currentTargetLocation.longitude] forState:UIControlStateNormal];
     
+    targetLine = [self.locationManager heading];
+    
+    if (targetLine.headingAccuracy < 0) {
+        return;
+    }
+    [self.setTargetLocationButtonOutlet    setTitle:[NSString stringWithFormat:@"%@", targetLine] forState:UIControlStateNormal];
 }
 
 - (IBAction)setTeeButton:(UIButton *)sender {

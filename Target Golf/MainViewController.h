@@ -23,6 +23,8 @@
     
     CLLocation *currentTeeCoreLocation;
     CLLocation *currentTargetCoreLocation;
+    
+    CLHeading *targetLine;
 
 }
 
