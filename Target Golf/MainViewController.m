@@ -37,6 +37,10 @@
 	// Do any additional setup after loading the view.
     
     [self.locationManager startUpdatingLocation];
+    
+    
+    self.locationManager.headingFilter = kCLHeadingFilterNone;
+    [self.locationManager startUpdatingHeading];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -123,12 +127,12 @@
 - (IBAction)setTargetButton:(UIButton *)sender {
     NSLog(@"%@", sender.titleLabel.text);
     
-    currentTargetCoreLocation = [self.locationManager location];
-    if (!currentTargetCoreLocation) {
-        return;
-    }
-
-    [self.setTargetLocationButtonOutlet    setTitle:[NSString stringWithFormat:@"%@ %@", currentTargetLocation.latitude, currentTargetLocation.longitude] forState:UIControlStateNormal];
+//    currentTargetCoreLocation = [self.locationManager location];
+//    if (!currentTargetCoreLocation) {
+//        return;
+//    }
+//
+//    [self.setTargetLocationButtonOutlet    setTitle:[NSString stringWithFormat:@"%@ %@", currentTargetLocation.latitude, currentTargetLocation.longitude] forState:UIControlStateNormal];
     
 }
 
